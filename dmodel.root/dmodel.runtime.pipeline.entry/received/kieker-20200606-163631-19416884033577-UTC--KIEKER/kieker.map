@@ -1,0 +1,3 @@
+$0=kieker.common.record.misc.KiekerMetadataRecord
+$1=dmodel.designtime.monitoring.records.ServiceCallRecord
+$2=dmodel.designtime.monitoring.records.ResourceUtilizationRecord

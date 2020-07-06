@@ -5,9 +5,10 @@ import java.util.Optional;
 
 import org.eclipse.emf.ecore.EObject;
 
+import dmodel.base.core.facade.IResettableQueryFacade;
 import dmodel.base.vsum.manager.VsumManager.VsumChangeSource;
 
-public interface IVsumFacade {
+public interface IVsumFacade extends IResettableQueryFacade {
 	// correspondences
 	public <T> Optional<T> resolveGenericCorrespondence(EObject obj, String tag, Class<T> type);
 

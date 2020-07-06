@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="ASCII"?>
+<imm:InstrumentationModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:imm="http://www.dmodel.com/InstrumentationMetamodel" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" id="_YbsOYIF_Eeq5X9KEEqof3g">
+  <points id="_ZdRIMLYZEeqDoooUltryjg" active="true">
+    <service href="teastore.repository#_xliLoDVXEeqPG_FgW3bi6Q"/>
+  </points>
+  <points id="_ZdRvQLYZEeqDoooUltryjg" active="true">
+    <service href="teastore.repository#_xlpgYDVXEeqPG_FgW3bi6Q"/>
+    <actionInstrumentationPoints id="_ZdS9YLYZEeqDoooUltryjg" active="true" type="LOOP">
+      <action xsi:type="seff:LoopAction" href="teastore.repository#_EbUxQKpZEeqHXcsU55mirw"/>
+    </actionInstrumentationPoints>
+  </points>
+  <points id="_ZdTkcLYZEeqDoooUltryjg" active="true">
+    <service href="teastore.repository#_ybDeYDVXEeqPG_FgW3bi6Q"/>
+  </points>
+  <points id="_ZdUykLYZEeqDoooUltryjg" active="true">
+    <service href="teastore.repository#_jGYIgDVZEeqPG_FgW3bi6Q"/>
+  </points>
+  <points id="_ZdWAsLYZEeqDoooUltryjg" active="true">
+    <service href="teastore.repository#_jGZ9sDVZEeqPG_FgW3bi6Q"/>
+    <actionInstrumentationPoints id="_ZdWnwLYZEeqDoooUltryjg" active="true">
+      <action xsi:type="seff:InternalAction" href="teastore.repository#_rez1YLVFEeqTFs1I1gP2AQ"/>
+    </actionInstrumentationPoints>
+  </points>
+  <points id="_ZdWnwbYZEeqDoooUltryjg" active="true">
+    <service href="teastore.repository#_5a0osDVeEeqPG_FgW3bi6Q"/>
+    <actionInstrumentationPoints id="_ZdXO0LYZEeqDoooUltryjg" active="true">
+      <action xsi:type="seff:InternalAction" href="teastore.repository#_bbWZ0LU6Eeq29rcBS3Ut9g"/>
+    </actionInstrumentationPoints>
+  </points>
+  <points id="_ZdX14LYZEeqDoooUltryjg" active="true">
+    <service href="teastore.repository#_6KaSkDVeEeqPG_FgW3bi6Q"/>
+  </points>
+  <points id="_ZdYc8LYZEeqDoooUltryjg" active="true">
+    <service href="teastore.repository#_NV690DViEeqPG_FgW3bi6Q"/>
+    <actionInstrumentationPoints id="_ZdYc8bYZEeqDoooUltryjg" active="true">
+      <action xsi:type="seff:InternalAction" href="teastore.repository#_lTsV0LRnEeqBG67dKda_bQ"/>
+    </actionInstrumentationPoints>
+    <actionInstrumentationPoints id="_ZdZEALYZEeqDoooUltryjg" active="true">
+      <action xsi:type="seff:InternalAction" href="teastore.repository#__EMrkLTMEeqYI7n2jTg1Ag"/>
+    </actionInstrumentationPoints>
+  </points>
+  <points id="_ZdZrELYZEeqDoooUltryjg" active="true">
+    <service href="teastore.repository#_mIuJEDViEeqPG_FgW3bi6Q"/>
+  </points>
+  <points id="_Zda5MLYZEeqDoooUltryjg" active="true">
+    <service href="teastore.repository#_Q7JfcDVfEeqPG_FgW3bi6Q"/>
+    <actionInstrumentationPoints id="_Zda5MbYZEeqDoooUltryjg" active="true">
+      <action xsi:type="seff:InternalAction" href="teastore.repository#_lYNwgDbTEeq5L_FI-wfNWQ"/>
+    </actionInstrumentationPoints>
+  </points>
+  <points id="_ZdbgQLYZEeqDoooUltryjg" active="true">
+    <service href="teastore.repository#_Q7KtkDVfEeqPG_FgW3bi6Q"/>
+    <actionInstrumentationPoints id="_ZdcHULYZEeqDoooUltryjg" active="true">
+      <action xsi:type="seff:InternalAction" href="teastore.repository#_tBq1MDbTEeq5L_FI-wfNWQ"/>
+    </actionInstrumentationPoints>
+  </points>
+  <points id="_ZdcuYLYZEeqDoooUltryjg" active="true">
+    <service href="teastore.repository#_nI0JkDVhEeqPG_FgW3bi6Q"/>
+  </points>
+  <points id="_ZddVcLYZEeqDoooUltryjg" active="true">
+    <service href="teastore.repository#_QrkiUDbTEeq5L_FI-wfNWQ"/>
+    <actionInstrumentationPoints id="_Zdd8gLYZEeqDoooUltryjg" active="true">
+      <action xsi:type="seff:InternalAction" href="teastore.repository#_Gq_WcK19EeqcvaJ1A892dQ"/>
+    </actionInstrumentationPoints>
+  </points>
+  <points id="_ZdfKoLYZEeqDoooUltryjg" active="true">
+    <service href="teastore.repository#_CetV8TVdEeqPG_FgW3bi6Q"/>
+    <actionInstrumentationPoints id="_ZdfKobYZEeqDoooUltryjg" active="true">
+      <action xsi:type="seff:InternalAction" href="teastore.repository#_EanpADVdEeqPG_FgW3bi6Q"/>
+    </actionInstrumentationPoints>
+    <actionInstrumentationPoints id="_ZdgYwLYZEeqDoooUltryjg" active="true">
+      <action xsi:type="seff:InternalAction" href="teastore.repository#_F5_KADVdEeqPG_FgW3bi6Q"/>
+    </actionInstrumentationPoints>
+    <actionInstrumentationPoints id="_ZdgYwbYZEeqDoooUltryjg" active="true" type="LOOP">
+      <action xsi:type="seff:LoopAction" href="teastore.repository#_P_ZTwDVdEeqPG_FgW3bi6Q"/>
+    </actionInstrumentationPoints>
+  </points>
+  <points id="_Zdhm4LYZEeqDoooUltryjg" active="true">
+    <service href="teastore.repository#_Cet9AjVdEeqPG_FgW3bi6Q"/>
+    <actionInstrumentationPoints id="_Zdi1ALYZEeqDoooUltryjg" active="true">
+      <action xsi:type="seff:InternalAction" href="teastore.repository#_fmO34DbgEeq5L_FI-wfNWQ"/>
+    </actionInstrumentationPoints>
+  </points>
+  <points id="_ZdjcELYZEeqDoooUltryjg" active="true">
+    <service href="teastore.repository#_lR_nUDVgEeqPG_FgW3bi6Q"/>
+    <actionInstrumentationPoints id="_ZdkDILYZEeqDoooUltryjg" active="true">
+      <action xsi:type="seff:InternalAction" href="teastore.repository#_o_OcwLQBEeq7laWsYbb_3A"/>
+    </actionInstrumentationPoints>
+  </points>
+  <points id="_ZdkqMLYZEeqDoooUltryjg" active="true">
+    <service href="teastore.repository#_lSA1cjVgEeqPG_FgW3bi6Q"/>
+    <actionInstrumentationPoints id="_ZdlRQLYZEeqDoooUltryjg" active="true">
+      <action xsi:type="seff:InternalAction" href="teastore.repository#_I-vuUK1oEeqcvaJ1A892dQ"/>
+    </actionInstrumentationPoints>
+  </points>
+  <points id="_Zdl4ULYZEeqDoooUltryjg" active="true">
+    <service href="teastore.repository#_l7sEkDVgEeqPG_FgW3bi6Q"/>
+    <actionInstrumentationPoints id="_ZdmfYLYZEeqDoooUltryjg" active="true">
+      <action xsi:type="seff:InternalAction" href="teastore.repository#_yqQ1EK1mEeqcvaJ1A892dQ"/>
+    </actionInstrumentationPoints>
+  </points>
+  <points id="_ZdnGcLYZEeqDoooUltryjg" active="true">
+    <service href="teastore.repository#_l7sEkzVgEeqPG_FgW3bi6Q"/>
+    <actionInstrumentationPoints id="_ZdntgLYZEeqDoooUltryjg" active="true">
+      <action xsi:type="seff:InternalAction" href="teastore.repository#_rq4oIK1mEeqcvaJ1A892dQ"/>
+    </actionInstrumentationPoints>
+  </points>
+  <points id="_ZdpisLYZEeqDoooUltryjg" active="true">
+    <service href="teastore.repository#_qMytYDVgEeqPG_FgW3bi6Q"/>
+    <actionInstrumentationPoints id="_ZdqJwLYZEeqDoooUltryjg" active="true">
+      <action xsi:type="seff:InternalAction" href="teastore.repository#_qNvpIDbgEeq5L_FI-wfNWQ"/>
+    </actionInstrumentationPoints>
+  </points>
+  <points id="_ZdrX4LYZEeqDoooUltryjg" active="true">
+    <service href="teastore.repository#_qMzUcjVgEeqPG_FgW3bi6Q"/>
+    <actionInstrumentationPoints id="_Zdr-8LYZEeqDoooUltryjg" active="true">
+      <action xsi:type="seff:InternalAction" href="teastore.repository#_uWLeIDbgEeq5L_FI-wfNWQ"/>
+    </actionInstrumentationPoints>
+  </points>
+  <points id="_ZdtNELYZEeqDoooUltryjg" active="true">
+    <service href="teastore.repository#_vHaNQDVgEeqPG_FgW3bi6Q"/>
+  </points>
+  <points id="_Zdt0ILYZEeqDoooUltryjg" active="true">
+    <service href="teastore.repository#_vHbbYDVgEeqPG_FgW3bi6Q"/>
+    <actionInstrumentationPoints id="_ZdubMLYZEeqDoooUltryjg" active="true">
+      <action xsi:type="seff:InternalAction" href="teastore.repository#__RGH0K1oEeqcvaJ1A892dQ"/>
+    </actionInstrumentationPoints>
+  </points>
+  <points id="_ZdvCQLYZEeqDoooUltryjg" active="true">
+    <service href="teastore.repository#_z_u0sKTKEeqKjI323B3R3w"/>
+  </points>
+  <points id="_ZdwQYLYZEeqDoooUltryjg" active="true">
+    <service href="teastore.repository#_kobTcKpwEeqHXcsU55mirw"/>
+  </points>
+  <points id="_ZdxegLYZEeqDoooUltryjg" active="true">
+    <service href="teastore.repository#_kob6gapwEeqHXcsU55mirw"/>
+    <actionInstrumentationPoints id="_ZdysoLYZEeqDoooUltryjg" active="true">
+      <action xsi:type="seff:InternalAction" href="teastore.repository#_e9gEoK1oEeqcvaJ1A892dQ"/>
+    </actionInstrumentationPoints>
+  </points>
+</imm:InstrumentationModel>

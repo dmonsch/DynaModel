@@ -39,7 +39,7 @@ public class RepositoryDerivation {
 	private static final double ADDITIVE_INCREASE = 0.02d;
 	private static final double MULTIPLE_DECREASE = 0.5d;
 
-	private static final double THRES_REL_DIST = 0.1d;
+	private static final double THRES_REL_DIST = 0.15d;
 
 	private final LoopEstimationImpl loopEstimation;
 	private final BranchEstimationImpl branchEstimation;
@@ -62,6 +62,8 @@ public class RepositoryDerivation {
 
 			// TODO integrate loop and branch estimation
 
+			System.out.println(currentValidationAdjustment);
+			System.out.println(currentValidationAdjustmentGradient);
 			IResourceDemandEstimator estimation = new ResourceDemandEstimatorAlternative(pcm);
 			estimation.prepare(monitoringDataSet);
 			RepositoryStoexChanges result = estimation.derive(currentValidationAdjustment);
@@ -127,12 +129,13 @@ public class RepositoryDerivation {
 
 			double adjustmentNow;
 			if (scaleUp && adjustmentBefore < 0 || !scaleUp && adjustmentBefore > 0) {
-				adjustmentNow = currentGradient * MULTIPLE_DECREASE;
+				adjustmentNow = currentGradient * MULTIPLE_DECREASE * -1;
 			} else {
-				adjustmentNow = currentGradient + ADDITIVE_INCREASE;
+				adjustmentNow = currentGradient + ADDITIVE_INCREASE * Math.signum(currentGradient);
 			}
 
-			currentValidationAdjustment.put(service, adjustmentNow * Math.signum(adjustmentBefore) + adjustmentBefore);
+			currentValidationAdjustment.put(service, adjustmentNow + adjustmentBefore);
+			currentValidationAdjustmentGradient.put(service, adjustmentNow);
 		}
 	}
 

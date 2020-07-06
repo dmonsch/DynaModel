@@ -4,11 +4,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import org.palladiosimulator.pcm.usagemodel.UsageScenario;
 
 import com.google.common.collect.Lists;
 
+import dmodel.base.core.config.ConfigurationContainer;
 import dmodel.base.core.facade.pcm.IRepositoryQueryFacade;
 import dmodel.base.core.facade.pcm.ISystemQueryFacade;
 import dmodel.base.shared.structure.Tree;
@@ -30,17 +32,24 @@ import lombok.extern.java.Log;
 
 @Log
 public class TreeBranchExtractor implements IUsageDataExtractor {
-	private static final double MIN_RELEVANCE = 0.05;
 	private static final double NANO_TO_MS = 1000000;
 
 	private ITransitionTreeExtractor treeExtractor;
 	private IUsageSessionClustering sessionClusterer;
+	private TreeLoopShrinker treeShrinker;
+	private TreeMerger treeMerger;
 
 	private int currentGroupId;
 
-	public TreeBranchExtractor() {
+	private ConfigurationContainer configuration;
+
+	public TreeBranchExtractor(ConfigurationContainer configuration) {
 		this.treeExtractor = new ReferenceTransitionTreeExtractor();
 		this.sessionClusterer = new DBScanUsageSessionClusterer();
+		this.treeShrinker = new TreeLoopShrinker();
+		this.treeMerger = new TreeMerger();
+
+		this.configuration = configuration;
 	}
 
 	@Override
@@ -82,23 +91,49 @@ public class TreeBranchExtractor implements IUsageDataExtractor {
 		for (Tree<DescriptorTransition<UsageServiceCallDescriptor>> transitionTree : transitionTrees) {
 			Tree<DescriptorTransition<IAbstractUsageDescriptor>> treeWithoutLoops = new Tree<>(
 					new DescriptorTransition<>(transitionTree.getRoot().getData().getCall(), 1.0f));
+
 			copyTree(treeWithoutLoops.getRoot(), transitionTree.getRoot());
+			treeShrinker.shrinkTree(treeWithoutLoops);
+
 			subTrees.add(treeWithoutLoops);
 		}
 
-		// 4.2. filter out not relevant trees
+		// 4.2. merge trees that are mergeable (identical structure)
+		int currentIndexA = 0;
+		int currentIndexB = 1;
+		while (currentIndexA < subTrees.size() - 1) {
+			while (currentIndexB <= subTrees.size() - 1) {
+				boolean merged = treeMerger.mergeTrees(subTrees.get(currentIndexA), subTrees.get(currentIndexB));
+				if (merged) {
+					subTrees.remove(currentIndexB);
+				} else {
+					currentIndexB++;
+				}
+			}
+			currentIndexA++;
+			currentIndexB = currentIndexA + 1;
+		}
+
+		// 4.3. filter out not relevant trees
 		// TODO
 
 		// 5. build final groups
 		log.info("Finalize usage scenarios.");
-		return subTrees.stream().map(relevantTree -> {
+		return IntStream.range(0, subTrees.size()).mapToObj(i -> {
+			Tree<DescriptorTransition<IAbstractUsageDescriptor>> relevantTree = subTrees.get(i);
+			List<ServiceCallSession> correspondingCluster = clusters.get(i);
+
 			if (relevantTree.getRoot().getChildren().size() > 0) {
-				double relevance = estimateRelevance(relevantTree);
-				double interarrival = interarrivalOverall / relevance;
+				double interarrival = interarrivalOverall
+						/ ((double) correspondingCluster.size() / (double) sessionNumber);
+				if (interarrival < configuration.getVfl().getMinInterarrivalTime()) {
+					interarrival = configuration.getVfl().getMinInterarrivalTime();
+				}
 
 				UsageGroup usageGroup = buildUserGroup(relevantTree, interarrival);
 				return usageGroup.toPCM();
 			}
+
 			return null;
 		}).filter(f -> f != null).collect(Collectors.toList());
 	}
@@ -132,22 +167,6 @@ public class TreeBranchExtractor implements IUsageDataExtractor {
 
 			// finally add the branch
 			container.add(nBranch);
-		}
-	}
-
-	private double estimateRelevance(Tree<DescriptorTransition<IAbstractUsageDescriptor>> tree) {
-		return estimateRelevanceRecursive(tree.getRoot());
-	}
-
-	private double estimateRelevanceRecursive(TreeNode<DescriptorTransition<IAbstractUsageDescriptor>> node) {
-		if (node.getChildren().size() == 0) {
-			return node.getData().getProbability();
-		} else {
-			double sum = 0;
-			for (TreeNode<DescriptorTransition<IAbstractUsageDescriptor>> desc : node.getChildren()) {
-				sum += estimateRelevanceRecursive(desc);
-			}
-			return sum;
 		}
 	}
 

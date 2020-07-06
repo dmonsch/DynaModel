@@ -18,7 +18,8 @@ import com.google.common.collect.Lists;
 
 import dmodel.base.core.config.ConfigurationContainer;
 import dmodel.base.core.config.MonitoringDataEntryConfiguration;
-import dmodel.runtime.pipeline.data.GenericPartitionedMonitoringData;
+import dmodel.designtime.monitoring.records.PCMContextRecord;
+import dmodel.runtime.pipeline.data.PCMPartionedMonitoringData;
 import dmodel.runtime.pipeline.entry.collector.IMonitoringDataCollector;
 import dmodel.runtime.pipeline.entry.core.IterativeRuntimePipeline;
 import dmodel.runtime.pipeline.entry.core.IterativeRuntimePipelineListener;
@@ -95,9 +96,13 @@ public class SlidingWindowMonitoringDataCollector
 			// log
 			log.info("Triggering the runtime pipeline.");
 
+			// filter it
+			List<PCMContextRecord> pcmContextRecords = collected.stream().filter(r -> r instanceof PCMContextRecord)
+					.map(PCMContextRecord.class::cast).collect(Collectors.toList());
+
 			// pass it to the processing part
 			pipeline.triggerPipeline(
-					new GenericPartitionedMonitoringData(collected, parentConfig.getVfl().getValidationShare()));
+					new PCMPartionedMonitoringData(pcmContextRecords, parentConfig.getVfl().getValidationShare()));
 
 			// cut old
 			cutRecordMap(currentTime);

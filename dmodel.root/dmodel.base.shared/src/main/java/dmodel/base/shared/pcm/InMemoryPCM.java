@@ -169,7 +169,8 @@ public class InMemoryPCM {
 			ret.usageModel = UsagemodelFactory.eINSTANCE.createUsageModel();
 		}
 
-		return ret;
+		// this fixes the internal links
+		return ret.copyDeep();
 	}
 
 	/**

@@ -35,7 +35,7 @@ public class InstrumentationModelQueryImpl implements IInstrumentationModelQuery
 	@Override
 	public Set<ServiceInstrumentationPoint> getFineGrainedInstrumentedServices() {
 		return modelProvider.getInstrumentation().getPoints().stream().filter(instr -> {
-			return instr.getActionInstrumentationPoints().stream().anyMatch(ac -> ac.isActive());
+			return instr.isActive() || instr.getActionInstrumentationPoints().stream().anyMatch(ac -> ac.isActive());
 		}).collect(Collectors.toSet());
 	}
 

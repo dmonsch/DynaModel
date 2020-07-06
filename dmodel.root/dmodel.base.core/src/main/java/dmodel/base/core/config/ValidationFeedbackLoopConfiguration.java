@@ -45,6 +45,16 @@ public class ValidationFeedbackLoopConfiguration {
 	private long measurements = 10000;
 
 	/**
+	 * Service target id.
+	 */
+	private String targetServiceId = "";
+
+	/**
+	 * Minimum interarrival time for users to keep the simulations fast and stable.
+	 */
+	private double minInterarrivalTime = 0;
+
+	/**
 	 * Split of the monitoring data into training/ validation data, e.g. a value of
 	 * 0.1 means that 10% of the monitoring are used for the validation and 90% for
 	 * the training.

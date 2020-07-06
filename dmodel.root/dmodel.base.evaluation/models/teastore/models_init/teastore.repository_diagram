@@ -102,7 +102,7 @@
         <styles xmi:type="notation:TitleStyle" xmi:id="_m3kChTVWEeqPG_FgW3bi6Q" showTitle="true"/>
       </children>
       <element xmi:type="repository:BasicComponent" href="teastore.repository#_m3fxEDVWEeqPG_FgW3bi6Q"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m3jbcDVWEeqPG_FgW3bi6Q" x="-16" y="472"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m3jbcDVWEeqPG_FgW3bi6Q" x="-96" y="476"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_dhdZUDVXEeqPG_FgW3bi6Q" type="2102" fontName=".AppleSystemUIFont">
       <children xmi:type="notation:DecorationNode" xmi:id="_dheAYDVXEeqPG_FgW3bi6Q" type="5102"/>
@@ -166,7 +166,7 @@
         <styles xmi:type="notation:FilteringStyle" xmi:id="_g7LHIzVXEeqPG_FgW3bi6Q"/>
       </children>
       <element xmi:type="repository:OperationInterface" href="teastore.repository#_g6IlUDVXEeqPG_FgW3bi6Q"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g7KgETVXEeqPG_FgW3bi6Q" x="40" y="16"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g7KgETVXEeqPG_FgW3bi6Q" x="-92" y="20"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_uzC14DVXEeqPG_FgW3bi6Q" type="2107" fontName=".AppleSystemUIFont">
       <children xmi:type="notation:DecorationNode" xmi:id="_uzLYwDVXEeqPG_FgW3bi6Q" type="5108"/>
@@ -312,6 +312,16 @@
     <children xmi:type="notation:Shape" xmi:id="_YkZ6YDVgEeqPG_FgW3bi6Q" type="2102" fontName=".AppleSystemUIFont">
       <children xmi:type="notation:DecorationNode" xmi:id="_YkahcDVgEeqPG_FgW3bi6Q" type="5102"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_YkahcTVgEeqPG_FgW3bi6Q" type="7102">
+        <children xmi:type="notation:Node" xmi:id="_IntSIKpZEeqHXcsU55mirw" type="3102">
+          <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_IntSIapZEeqHXcsU55mirw" diagramLink="_vETbAK1mEeqcvaJ1A892dQ" hint="PCM SEFF Model"/>
+          <element xmi:type="seff:ResourceDemandingSEFF" href="teastore.repository#_lR_nUDVgEeqPG_FgW3bi6Q"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_IntSIqpZEeqHXcsU55mirw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_IntSI6pZEeqHXcsU55mirw" type="3102">
+          <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_IntSJKpZEeqHXcsU55mirw" diagramLink="_TxytgKpwEeqHXcsU55mirw" hint="PCM SEFF Model"/>
+          <element xmi:type="seff:ResourceDemandingSEFF" href="teastore.repository#_lSA1cjVgEeqPG_FgW3bi6Q"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_IntSJapZEeqHXcsU55mirw"/>
+        </children>
         <styles xmi:type="notation:SortingStyle" xmi:id="_YkahcjVgEeqPG_FgW3bi6Q"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_YkahczVgEeqPG_FgW3bi6Q"/>
       </children>
@@ -335,7 +345,7 @@
           <layoutConstraint xmi:type="notation:Location" xmi:id="_l7t5wjVgEeqPG_FgW3bi6Q"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_l7t5wzVgEeqPG_FgW3bi6Q" type="3102">
-          <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_l7t5xDVgEeqPG_FgW3bi6Q" hint="PCM SEFF Model"/>
+          <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_l7t5xDVgEeqPG_FgW3bi6Q" diagramLink="_2cQE8KpxEeqHXcsU55mirw" hint="PCM SEFF Model"/>
           <element xmi:type="seff:ResourceDemandingSEFF" href="teastore.repository#_l7sEkzVgEeqPG_FgW3bi6Q"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_l7t5xTVgEeqPG_FgW3bi6Q"/>
         </children>
@@ -383,6 +393,16 @@
     <children xmi:type="notation:Shape" xmi:id="_raz_sDVgEeqPG_FgW3bi6Q" type="2102" fontName=".AppleSystemUIFont">
       <children xmi:type="notation:DecorationNode" xmi:id="_raz_sjVgEeqPG_FgW3bi6Q" type="5102"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_raz_szVgEeqPG_FgW3bi6Q" type="7102">
+        <children xmi:type="notation:Node" xmi:id="_STtQMKD_Eeqd2ZqeUI3CiQ" type="3102">
+          <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_STtQMaD_Eeqd2ZqeUI3CiQ" diagramLink="_5FmzkKD_Eeqd2ZqeUI3CiQ" hint="PCM SEFF Model"/>
+          <element xmi:type="seff:ResourceDemandingSEFF" href="teastore.repository#_vHaNQDVgEeqPG_FgW3bi6Q"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_STtQMqD_Eeqd2ZqeUI3CiQ"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_STtQM6D_Eeqd2ZqeUI3CiQ" type="3102">
+          <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_STtQNKD_Eeqd2ZqeUI3CiQ" diagramLink="_-TwV0K1oEeqcvaJ1A892dQ" hint="PCM SEFF Model"/>
+          <element xmi:type="seff:ResourceDemandingSEFF" href="teastore.repository#_vHbbYDVgEeqPG_FgW3bi6Q"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_STtQNaD_Eeqd2ZqeUI3CiQ"/>
+        </children>
         <styles xmi:type="notation:SortingStyle" xmi:id="_raz_tDVgEeqPG_FgW3bi6Q"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_raz_tTVgEeqPG_FgW3bi6Q"/>
       </children>
@@ -395,7 +415,64 @@
         <styles xmi:type="notation:TitleStyle" xmi:id="_raz_uzVgEeqPG_FgW3bi6Q" showTitle="true"/>
       </children>
       <element xmi:type="repository:BasicComponent" href="teastore.repository#_raxjcDVgEeqPG_FgW3bi6Q"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_raz_sTVgEeqPG_FgW3bi6Q" x="584" y="584"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_raz_sTVgEeqPG_FgW3bi6Q" x="564" y="620"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_oQCv4KTJEeqKjI323B3R3w" type="2107" fontName=".AppleSystemUIFont">
+      <children xmi:type="notation:DecorationNode" xmi:id="_oQD-AKTJEeqKjI323B3R3w" type="5108"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_oQD-AaTJEeqKjI323B3R3w" type="7106">
+        <children xmi:type="notation:Node" xmi:id="_wsh-kKTKEeqKjI323B3R3w" type="3106">
+          <element xmi:type="repository:OperationSignature" href="teastore.repository#_wsW_cKTKEeqKjI323B3R3w"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_wsiloKTKEeqKjI323B3R3w"/>
+        </children>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_oQD-AqTJEeqKjI323B3R3w"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_oQD-A6TJEeqKjI323B3R3w"/>
+      </children>
+      <element xmi:type="repository:OperationInterface" href="teastore.repository#_oPBcMKTJEeqKjI323B3R3w"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oQDW8KTJEeqKjI323B3R3w" x="648" y="184"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_yBHy8KTKEeqKjI323B3R3w" type="2102" fontName=".AppleSystemUIFont">
+      <children xmi:type="notation:DecorationNode" xmi:id="_yBIaAKTKEeqKjI323B3R3w" type="5102"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_yBIaAaTKEeqKjI323B3R3w" type="7102">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_yBIaAqTKEeqKjI323B3R3w"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_yBIaA6TKEeqKjI323B3R3w"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_yBIaBKTKEeqKjI323B3R3w" type="7103">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_yBIaBaTKEeqKjI323B3R3w" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_yBIaBqTKEeqKjI323B3R3w"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_yBIaB6TKEeqKjI323B3R3w"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_yBIaCKTKEeqKjI323B3R3w" type="7104">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_yBIaCaTKEeqKjI323B3R3w" showTitle="true"/>
+      </children>
+      <element xmi:type="repository:BasicComponent" href="teastore.repository#_yA04AKTKEeqKjI323B3R3w"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yBHy8aTKEeqKjI323B3R3w" x="780" y="296"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_iaLTMKpwEeqHXcsU55mirw" type="2102" fontName=".AppleSystemUIFont">
+      <children xmi:type="notation:DecorationNode" xmi:id="_iaL6QKpwEeqHXcsU55mirw" type="5102"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_iaL6QapwEeqHXcsU55mirw" type="7102">
+        <children xmi:type="notation:Node" xmi:id="_LYsoQK1oEeqcvaJ1A892dQ" type="3102">
+          <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_LYsoQa1oEeqcvaJ1A892dQ" hint="PCM SEFF Model"/>
+          <element xmi:type="seff:ResourceDemandingSEFF" href="teastore.repository#_kobTcKpwEeqHXcsU55mirw"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_LYsoQq1oEeqcvaJ1A892dQ"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_LYsoQ61oEeqcvaJ1A892dQ" type="3102">
+          <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_LYsoRK1oEeqcvaJ1A892dQ" diagramLink="_eY-bQK1oEeqcvaJ1A892dQ" hint="PCM SEFF Model"/>
+          <element xmi:type="seff:ResourceDemandingSEFF" href="teastore.repository#_kob6gapwEeqHXcsU55mirw"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_LYsoRa1oEeqcvaJ1A892dQ"/>
+        </children>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_iaL6QqpwEeqHXcsU55mirw"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_iaL6Q6pwEeqHXcsU55mirw"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_iaL6RKpwEeqHXcsU55mirw" type="7103">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_iaL6RapwEeqHXcsU55mirw" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_iaL6RqpwEeqHXcsU55mirw"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_iaL6R6pwEeqHXcsU55mirw"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_iaL6SKpwEeqHXcsU55mirw" type="7104">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_iaL6SapwEeqHXcsU55mirw" showTitle="true"/>
+      </children>
+      <element xmi:type="repository:BasicComponent" href="teastore.repository#_iaElgKpwEeqHXcsU55mirw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iaLTMapwEeqHXcsU55mirw" x="476" y="500"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_WxbFYTVWEeqPG_FgW3bi6Q"/>
     <element xmi:type="repository:Repository" href="teastore.repository#_VdKBIDVWEeqPG_FgW3bi6Q"/>
@@ -568,6 +645,36 @@
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_vHr6EDVgEeqPG_FgW3bi6Q" id="(0.38311688311688313,0.08974358974358974)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_vHr6ETVgEeqPG_FgW3bi6Q" id="(0.5948717948717949,0.2)"/>
     </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_-5UC0KTJEeqKjI323B3R3w" type="4106" source="_dhdZUDVXEeqPG_FgW3bi6Q" target="_oQCv4KTJEeqKjI323B3R3w">
+      <children xmi:type="notation:DecorationNode" xmi:id="_-5VQ8KTJEeqKjI323B3R3w" type="6106">
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_-5VQ8aTJEeqKjI323B3R3w"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_-5VQ8qTJEeqKjI323B3R3w" y="40"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_-5UC0aTJEeqKjI323B3R3w" fontName=".AppleSystemUIFont"/>
+      <element xmi:type="repository:OperationRequiredRole" href="teastore.repository#_-47BQKTJEeqKjI323B3R3w"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-5UC0qTJEeqKjI323B3R3w" points="[4, -15, -35, 116]$[41, -151, 2, -20]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-5Y7UKTJEeqKjI323B3R3w" id="(0.6455696202531646,0.09090909090909091)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_z_yfEKTKEeqKjI323B3R3w" type="4105" source="_yBHy8KTKEeqKjI323B3R3w" target="_oQCv4KTJEeqKjI323B3R3w">
+      <children xmi:type="notation:DecorationNode" xmi:id="_z_yfE6TKEeqKjI323B3R3w" type="6105">
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_z_yfFKTKEeqKjI323B3R3w"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_z_yfFaTKEeqKjI323B3R3w" y="40"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_z_yfEaTKEeqKjI323B3R3w" fontName=".AppleSystemUIFont"/>
+      <element xmi:type="repository:OperationProvidedRole" href="teastore.repository#_z_lDsKTKEeqKjI323B3R3w"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_z_yfEqTKEeqKjI323B3R3w" points="[-37, -39, 113, 92]$[-98, -139, 52, -8]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_kolEcKpwEeqHXcsU55mirw" type="4105" source="_iaLTMKpwEeqHXcsU55mirw" target="_BYWqgDVgEeqPG_FgW3bi6Q">
+      <children xmi:type="notation:DecorationNode" xmi:id="_kolrgKpwEeqHXcsU55mirw" type="6105">
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_kolrgapwEeqHXcsU55mirw"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_kolrgqpwEeqHXcsU55mirw" y="40"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_kolEcapwEeqHXcsU55mirw" fontName=".AppleSystemUIFont"/>
+      <element xmi:type="repository:OperationProvidedRole" href="teastore.repository#_koXCAKpwEeqHXcsU55mirw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kolEcqpwEeqHXcsU55mirw" points="[-59, 11, 287, -57]$[-315, 58, 31, -10]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kom5oKpwEeqHXcsU55mirw" id="(0.3172043010752688,0.24358974358974358)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kongsKpwEeqHXcsU55mirw" id="(0.7905405405405406,0.2727272727272727)"/>
+    </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_xJ_NMDVZEeqPG_FgW3bi6Q" type="PCM SEFF Model" measurementUnit="Pixel">
     <children xmi:type="notation:Node" xmi:id="_xaAmMDVZEeqPG_FgW3bi6Q" type="2001">
@@ -681,38 +788,6 @@
       <element xmi:type="seff:ExternalCallAction" href="teastore.repository#_-iMAkDVdEeqPG_FgW3bi6Q"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_--vZsTVdEeqPG_FgW3bi6Q" x="152" y="91"/>
     </children>
-    <children xmi:type="notation:Shape" xmi:id="_OXBkcDbhEeq5L_FI-wfNWQ" type="2003" fontName=".AppleSystemUIFont">
-      <children xmi:type="notation:DecorationNode" xmi:id="_OXBkcjbhEeq5L_FI-wfNWQ" type="5002"/>
-      <children xmi:type="notation:BasicCompartment" xmi:id="_OXBkczbhEeq5L_FI-wfNWQ" type="7001">
-        <children xmi:type="notation:Node" xmi:id="_PEtJ0DbhEeq5L_FI-wfNWQ" type="3042">
-          <children xmi:type="notation:DecorationNode" xmi:id="_PEtJ1TbhEeq5L_FI-wfNWQ" type="5040"/>
-          <children xmi:type="notation:BasicCompartment" xmi:id="_PEtJ1jbhEeq5L_FI-wfNWQ" type="7037">
-            <children xmi:type="notation:Node" xmi:id="_TRJ8IDbhEeq5L_FI-wfNWQ" type="3033">
-              <element xmi:type="parameter:VariableCharacterisation" href="teastore.repository#//@components__Repository.2/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.3/@inputVariableUsages__CallAction.0/@variableCharacterisation_VariableUsage.0"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_TRJ8ITbhEeq5L_FI-wfNWQ"/>
-            </children>
-            <styles xmi:type="notation:TitleStyle" xmi:id="_PEtJ1zbhEeq5L_FI-wfNWQ" showTitle="true"/>
-            <styles xmi:type="notation:SortingStyle" xmi:id="_PEtJ2DbhEeq5L_FI-wfNWQ"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_PEtJ2TbhEeq5L_FI-wfNWQ"/>
-          </children>
-          <styles xmi:type="notation:DescriptionStyle" xmi:id="_PEtJ0TbhEeq5L_FI-wfNWQ"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_PEtJ0jbhEeq5L_FI-wfNWQ" fontName=".AppleSystemUIFont"/>
-          <styles xmi:type="notation:LineStyle" xmi:id="_PEtJ0zbhEeq5L_FI-wfNWQ"/>
-          <element xmi:type="parameter:VariableUsage" href="teastore.repository#//@components__Repository.2/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.3/@inputVariableUsages__CallAction.0"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PEtJ1DbhEeq5L_FI-wfNWQ"/>
-        </children>
-        <styles xmi:type="notation:TitleStyle" xmi:id="_OXBkdDbhEeq5L_FI-wfNWQ" showTitle="true"/>
-        <styles xmi:type="notation:SortingStyle" xmi:id="_OXBkdTbhEeq5L_FI-wfNWQ"/>
-        <styles xmi:type="notation:FilteringStyle" xmi:id="_OXBkdjbhEeq5L_FI-wfNWQ"/>
-      </children>
-      <children xmi:type="notation:BasicCompartment" xmi:id="_OXBkdzbhEeq5L_FI-wfNWQ" type="7021">
-        <styles xmi:type="notation:TitleStyle" xmi:id="_OXBkeDbhEeq5L_FI-wfNWQ" showTitle="true"/>
-        <styles xmi:type="notation:SortingStyle" xmi:id="_OXBkeTbhEeq5L_FI-wfNWQ"/>
-        <styles xmi:type="notation:FilteringStyle" xmi:id="_OXBkejbhEeq5L_FI-wfNWQ"/>
-      </children>
-      <element xmi:type="seff:ExternalCallAction" href="teastore.repository#_MirR8DbhEeq5L_FI-wfNWQ"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OXBkcTbhEeq5L_FI-wfNWQ" x="408" y="208"/>
-    </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_evFQwTVcEeqPG_FgW3bi6Q"/>
     <element xmi:type="seff:ResourceDemandingSEFF" href="teastore.repository#_jGYIgDVZEeqPG_FgW3bi6Q"/>
     <edges xmi:type="notation:Connector" xmi:id="__9DcEDVdEeqPG_FgW3bi6Q" type="4001" source="_-CKcsDVdEeqPG_FgW3bi6Q" target="_--vZsDVdEeqPG_FgW3bi6Q">
@@ -721,18 +796,10 @@
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__9DcEjVdEeqPG_FgW3bi6Q" points="[8, 3, -189, -87]$[183, 81, -14, -9]"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__9EDIDVdEeqPG_FgW3bi6Q" id="(0.30927835051546393,0.13636363636363635)"/>
     </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_Tp2I8DbhEeq5L_FI-wfNWQ" type="4001" source="_--vZsDVdEeqPG_FgW3bi6Q" target="_OXBkcDbhEeq5L_FI-wfNWQ">
-      <styles xmi:type="notation:FontStyle" xmi:id="_Tp2I8TbhEeq5L_FI-wfNWQ" fontName=".AppleSystemUIFont"/>
+    <edges xmi:type="notation:Connector" xmi:id="_JY2Z8K10EeqcvaJ1A892dQ" type="4001" source="_--vZsDVdEeqPG_FgW3bi6Q" target="_-CKctTVdEeqPG_FgW3bi6Q">
+      <styles xmi:type="notation:FontStyle" xmi:id="_JY2Z8a10EeqcvaJ1A892dQ" fontName=".AppleSystemUIFont"/>
       <element xsi:nil="true"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Tp2I8jbhEeq5L_FI-wfNWQ" points="[90, 39, -192, -85]$[285, 101, 3, -23]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Tp3XEDbhEeq5L_FI-wfNWQ" id="(0.5714285714285714,0.13793103448275862)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Tp3XETbhEeq5L_FI-wfNWQ" id="(0.5195729537366548,0.19827586206896552)"/>
-    </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_T9hS4DbhEeq5L_FI-wfNWQ" type="4001" source="_OXBkcDbhEeq5L_FI-wfNWQ" target="_-CKctTVdEeqPG_FgW3bi6Q">
-      <styles xmi:type="notation:FontStyle" xmi:id="_T9hS4TbhEeq5L_FI-wfNWQ" fontName=".AppleSystemUIFont"/>
-      <element xsi:nil="true"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_T9hS4jbhEeq5L_FI-wfNWQ" points="[-126, 96, 41, -34]$[-168, 114, -1, -16]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_T9h58DbhEeq5L_FI-wfNWQ" id="(0.4483985765124555,0.11206896551724138)"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_JY2Z8q10EeqcvaJ1A892dQ" points="[33, 58, -77, -144]$[123, 205, 13, 3]"/>
     </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_Dns-UDVdEeqPG_FgW3bi6Q" type="PCM SEFF Model" measurementUnit="Pixel">
@@ -905,7 +972,7 @@
     </children>
     <children xmi:type="notation:Shape" xmi:id="_2s5p4DVeEeqPG_FgW3bi6Q" type="2002" fontName=".AppleSystemUIFont">
       <element xmi:type="seff:StopAction" href="teastore.repository#_jGakwTVZEeqPG_FgW3bi6Q"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2s5p4TVeEeqPG_FgW3bi6Q" x="188" y="264"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2s5p4TVeEeqPG_FgW3bi6Q" x="244" y="368"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_3fEtsDVeEeqPG_FgW3bi6Q" type="2003" fontName=".AppleSystemUIFont">
       <children xmi:type="notation:DecorationNode" xmi:id="_3fEtsjVeEeqPG_FgW3bi6Q" type="5002"/>
@@ -922,6 +989,30 @@
       <element xmi:type="seff:ExternalCallAction" href="teastore.repository#_3PQJADVeEeqPG_FgW3bi6Q"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3fEtsTVeEeqPG_FgW3bi6Q" x="75" y="116"/>
     </children>
+    <children xmi:type="notation:Shape" xmi:id="_re5U8LVFEeqTFs1I1gP2AQ" type="2006" fontName=".AppleSystemUIFont">
+      <children xmi:type="notation:DecorationNode" xmi:id="_re5U8rVFEeqTFs1I1gP2AQ" type="5012"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_re5U87VFEeqTFs1I1gP2AQ" type="7012">
+        <children xmi:type="notation:Node" xmi:id="_tJJQQLVFEeqTFs1I1gP2AQ" type="3051">
+          <element xmi:type="seff_performance:ParametricResourceDemand" href="teastore.repository#//@components__Repository.2/@serviceEffectSpecifications__BasicComponent.1/@steps_Behaviour.3/@resourceDemand_Action.0"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_tJJQQbVFEeqTFs1I1gP2AQ"/>
+        </children>
+        <styles xmi:type="notation:TitleStyle" xmi:id="_re5U9LVFEeqTFs1I1gP2AQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_re5U9bVFEeqTFs1I1gP2AQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_re5U9rVFEeqTFs1I1gP2AQ"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_re5U97VFEeqTFs1I1gP2AQ" type="7046">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_re5U-LVFEeqTFs1I1gP2AQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_re5U-bVFEeqTFs1I1gP2AQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_re5U-rVFEeqTFs1I1gP2AQ"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_re5U-7VFEeqTFs1I1gP2AQ" type="7051">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_re5U_LVFEeqTFs1I1gP2AQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_re5U_bVFEeqTFs1I1gP2AQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_re5U_rVFEeqTFs1I1gP2AQ"/>
+      </children>
+      <element xmi:type="seff:InternalAction" href="teastore.repository#_rez1YLVFEeqTFs1I1gP2AQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_re5U8bVFEeqTFs1I1gP2AQ" x="197" y="245"/>
+    </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_2oNXITVeEeqPG_FgW3bi6Q"/>
     <element xmi:type="seff:ResourceDemandingSEFF" href="teastore.repository#_jGZ9sDVZEeqPG_FgW3bi6Q"/>
     <edges xmi:type="notation:Connector" xmi:id="_4NU60DVeEeqPG_FgW3bi6Q" type="4001" source="_2s5C0DVeEeqPG_FgW3bi6Q" target="_3fEtsDVeEeqPG_FgW3bi6Q">
@@ -930,11 +1021,17 @@
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_4NU60jVeEeqPG_FgW3bi6Q" points="[7, 5, -131, -112]$[126, 106, -12, -11]"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4NVh4DVeEeqPG_FgW3bi6Q" id="(0.3880597014925373,0.16666666666666666)"/>
     </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_4fawYDVeEeqPG_FgW3bi6Q" type="4001" source="_3fEtsDVeEeqPG_FgW3bi6Q" target="_2s5p4DVeEeqPG_FgW3bi6Q">
-      <styles xmi:type="notation:FontStyle" xmi:id="_4fawYTVeEeqPG_FgW3bi6Q" fontName=".AppleSystemUIFont"/>
+    <edges xmi:type="notation:Connector" xmi:id="_sGJiMLVFEeqTFs1I1gP2AQ" type="4001" source="_3fEtsDVeEeqPG_FgW3bi6Q" target="_re5U8LVFEeqTFs1I1gP2AQ">
+      <styles xmi:type="notation:FontStyle" xmi:id="_sGJiMbVFEeqTFs1I1gP2AQ" fontName=".AppleSystemUIFont"/>
       <element xsi:nil="true"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_4fawYjVeEeqPG_FgW3bi6Q" points="[3, 51, -8, -97]$[20, 137, 9, -11]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4fdMoDVeEeqPG_FgW3bi6Q" id="(0.582089552238806,0.22727272727272727)"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_sGJiMrVFEeqTFs1I1gP2AQ" points="[23, 33, -55, -76]$[74, 96, -4, -13]"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sGMlgLVFEeqTFs1I1gP2AQ" id="(0.43410852713178294,0.15476190476190477)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_sYzYcLVFEeqTFs1I1gP2AQ" type="4001" source="_re5U8LVFEeqTFs1I1gP2AQ" target="_2s5p4DVeEeqPG_FgW3bi6Q">
+      <styles xmi:type="notation:FontStyle" xmi:id="_sYzYcbVFEeqTFs1I1gP2AQ" fontName=".AppleSystemUIFont"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_sYzYcrVFEeqTFs1I1gP2AQ" points="[-13, 67, 9, -54]$[-19, 106, 3, -15]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sY1NoLVFEeqTFs1I1gP2AQ" id="(0.6511627906976745,0.20238095238095238)"/>
     </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_7tf18DVeEeqPG_FgW3bi6Q" type="PCM SEFF Model" measurementUnit="Pixel">
@@ -947,7 +1044,7 @@
     </children>
     <children xmi:type="notation:Shape" xmi:id="_7v8tBTVeEeqPG_FgW3bi6Q" type="2002" fontName=".AppleSystemUIFont">
       <element xmi:type="seff:StopAction" href="teastore.repository#_5uo8kDVeEeqPG_FgW3bi6Q"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7v8tBjVeEeqPG_FgW3bi6Q" x="320" y="304"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7v8tBjVeEeqPG_FgW3bi6Q" x="336" y="424"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_8kr8oDVeEeqPG_FgW3bi6Q" type="2003" fontName=".AppleSystemUIFont">
       <children xmi:type="notation:DecorationNode" xmi:id="_8ksjsDVeEeqPG_FgW3bi6Q" type="5002"/>
@@ -964,6 +1061,30 @@
       <element xmi:type="seff:ExternalCallAction" href="teastore.repository#_8TRcgDVeEeqPG_FgW3bi6Q"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8kr8oTVeEeqPG_FgW3bi6Q" x="155" y="143"/>
     </children>
+    <children xmi:type="notation:Shape" xmi:id="_bbdukLU6Eeq29rcBS3Ut9g" type="2006" fontName=".AppleSystemUIFont">
+      <children xmi:type="notation:DecorationNode" xmi:id="_bbeVoLU6Eeq29rcBS3Ut9g" type="5012"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_bbeVobU6Eeq29rcBS3Ut9g" type="7012">
+        <children xmi:type="notation:Node" xmi:id="_dLilELU6Eeq29rcBS3Ut9g" type="3051">
+          <element xmi:type="seff_performance:ParametricResourceDemand" href="teastore.repository#//@components__Repository.2/@serviceEffectSpecifications__BasicComponent.2/@steps_Behaviour.3/@resourceDemand_Action.0"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_dLilEbU6Eeq29rcBS3Ut9g"/>
+        </children>
+        <styles xmi:type="notation:TitleStyle" xmi:id="_bbeVorU6Eeq29rcBS3Ut9g" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_bbeVo7U6Eeq29rcBS3Ut9g"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_bbeVpLU6Eeq29rcBS3Ut9g"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_bbeVpbU6Eeq29rcBS3Ut9g" type="7046">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_bbeVprU6Eeq29rcBS3Ut9g" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_bbeVp7U6Eeq29rcBS3Ut9g"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_bbeVqLU6Eeq29rcBS3Ut9g"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_bbeVqbU6Eeq29rcBS3Ut9g" type="7051">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_bbeVqrU6Eeq29rcBS3Ut9g" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_bbeVq7U6Eeq29rcBS3Ut9g"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_bbeVrLU6Eeq29rcBS3Ut9g"/>
+      </children>
+      <element xmi:type="seff:InternalAction" href="teastore.repository#_bbWZ0LU6Eeq29rcBS3Ut9g"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bbdukbU6Eeq29rcBS3Ut9g" x="275" y="292"/>
+    </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_7tf18TVeEeqPG_FgW3bi6Q"/>
     <element xmi:type="seff:ResourceDemandingSEFF" href="teastore.repository#_5a0osDVeEeqPG_FgW3bi6Q"/>
     <edges xmi:type="notation:Connector" xmi:id="_9Hw0gDVeEeqPG_FgW3bi6Q" type="4001" source="_7v8tADVeEeqPG_FgW3bi6Q" target="_8kr8oDVeEeqPG_FgW3bi6Q">
@@ -972,11 +1093,16 @@
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9Hw0gjVeEeqPG_FgW3bi6Q" points="[8, 3, -263, -142]$[285, 133, 14, -12]"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9HyCoDVeEeqPG_FgW3bi6Q" id="(0.6179245283018868,0.18181818181818182)"/>
     </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_9bOjEDVeEeqPG_FgW3bi6Q" type="4001" source="_8kr8oDVeEeqPG_FgW3bi6Q" target="_7v8tBTVeEeqPG_FgW3bi6Q">
-      <styles xmi:type="notation:FontStyle" xmi:id="_9bOjETVeEeqPG_FgW3bi6Q" fontName=".AppleSystemUIFont"/>
+    <edges xmi:type="notation:Connector" xmi:id="_cTydsLU6Eeq29rcBS3Ut9g" type="4001" source="_8kr8oDVeEeqPG_FgW3bi6Q" target="_bbdukLU6Eeq29rcBS3Ut9g">
+      <styles xmi:type="notation:FontStyle" xmi:id="_cTydsbU6Eeq29rcBS3Ut9g" fontName=".AppleSystemUIFont"/>
       <element xsi:nil="true"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9bOjEjVeEeqPG_FgW3bi6Q" points="[29, 55, -55, -110]$[97, 168, 13, 3]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9bPxMDVeEeqPG_FgW3bi6Q" id="(0.4528301886792453,0.16666666666666666)"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_cTydsrU6Eeq29rcBS3Ut9g" points="[15, 33, -63, -125]$[73, 116, -5, -42]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_clQoMLU6Eeq29rcBS3Ut9g" type="4001" source="_bbdukLU6Eeq29rcBS3Ut9g" target="_7v8tBTVeEeqPG_FgW3bi6Q">
+      <styles xmi:type="notation:FontStyle" xmi:id="_clQoMbU6Eeq29rcBS3Ut9g" fontName=".AppleSystemUIFont"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_clQoMrU6Eeq29rcBS3Ut9g" points="[-3, 69, 3, -63]$[8, 128, 14, -4]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_clR2ULU6Eeq29rcBS3Ut9g" id="(0.6356589147286822,0.17857142857142858)"/>
     </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_97q9sDVeEeqPG_FgW3bi6Q" type="PCM SEFF Model" measurementUnit="Pixel">
@@ -1022,8 +1148,55 @@
     </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_nCFE4DVgEeqPG_FgW3bi6Q" type="PCM SEFF Model" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_xh4QsK1mEeqcvaJ1A892dQ" type="2001">
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_xh4Qsa1mEeqcvaJ1A892dQ"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_xh4Qsq1mEeqcvaJ1A892dQ" fontName=".AppleSystemUIFont"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_xh4Qs61mEeqcvaJ1A892dQ"/>
+      <element xmi:type="seff:StartAction" href="teastore.repository#_l7sEkTVgEeqPG_FgW3bi6Q"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xh4QtK1mEeqcvaJ1A892dQ" x="5"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_xh4Qta1mEeqcvaJ1A892dQ" type="2002" fontName=".AppleSystemUIFont">
+      <element xmi:type="seff:StopAction" href="teastore.repository#_l7sEkjVgEeqPG_FgW3bi6Q"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xh4Qtq1mEeqcvaJ1A892dQ" x="352" y="404"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_yqTRUK1mEeqcvaJ1A892dQ" type="2006" fontName=".AppleSystemUIFont">
+      <children xmi:type="notation:DecorationNode" xmi:id="_yqT4YK1mEeqcvaJ1A892dQ" type="5012"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_yqT4Ya1mEeqcvaJ1A892dQ" type="7012">
+        <children xmi:type="notation:Node" xmi:id="_3mnaUK1mEeqcvaJ1A892dQ" type="3051">
+          <element xmi:type="seff_performance:ParametricResourceDemand" href="teastore.repository#//@components__Repository.7/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@resourceDemand_Action.0"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_3mnaUa1mEeqcvaJ1A892dQ"/>
+        </children>
+        <styles xmi:type="notation:TitleStyle" xmi:id="_yqT4Yq1mEeqcvaJ1A892dQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_yqT4Y61mEeqcvaJ1A892dQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_yqT4ZK1mEeqcvaJ1A892dQ"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_yqT4Za1mEeqcvaJ1A892dQ" type="7046">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_yqT4Zq1mEeqcvaJ1A892dQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_yqT4Z61mEeqcvaJ1A892dQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_yqT4aK1mEeqcvaJ1A892dQ"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_yqT4aa1mEeqcvaJ1A892dQ" type="7051">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_yqT4aq1mEeqcvaJ1A892dQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_yqT4a61mEeqcvaJ1A892dQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_yqT4bK1mEeqcvaJ1A892dQ"/>
+      </children>
+      <element xmi:type="seff:InternalAction" href="teastore.repository#_yqQ1EK1mEeqcvaJ1A892dQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yqTRUa1mEeqcvaJ1A892dQ" x="188" y="175"/>
+    </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_nCFE4TVgEeqPG_FgW3bi6Q"/>
     <element xmi:type="seff:ResourceDemandingSEFF" href="teastore.repository#_l7sEkDVgEeqPG_FgW3bi6Q"/>
+    <edges xmi:type="notation:Connector" xmi:id="_zrbXIK1mEeqcvaJ1A892dQ" type="4001" source="_xh4QsK1mEeqcvaJ1A892dQ" target="_yqTRUK1mEeqcvaJ1A892dQ">
+      <styles xmi:type="notation:FontStyle" xmi:id="_zrbXIa1mEeqcvaJ1A892dQ" fontName=".AppleSystemUIFont"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_zrbXIq1mEeqcvaJ1A892dQ" points="[7, 5, -224, -172]$[228, 165, -3, -12]"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zrclQK1mEeqcvaJ1A892dQ" id="(0.4496124031007752,0.14285714285714285)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_z98DcK1mEeqcvaJ1A892dQ" type="4001" source="_yqTRUK1mEeqcvaJ1A892dQ" target="_xh4Qta1mEeqcvaJ1A892dQ">
+      <styles xmi:type="notation:FontStyle" xmi:id="_z98Dca1mEeqcvaJ1A892dQ" fontName=".AppleSystemUIFont"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_z98Dcq1mEeqcvaJ1A892dQ" points="[23, 67, -58, -160]$[90, 236, 9, 9]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_z99RkK1mEeqcvaJ1A892dQ" id="(0.7596899224806202,0.20238095238095238)"/>
+    </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_1YeGMDVhEeqPG_FgW3bi6Q" type="PCM SEFF Model" measurementUnit="Pixel">
     <children xmi:type="notation:Node" xmi:id="_EUsMkDbQEeq5L_FI-wfNWQ" type="2001">
@@ -1095,7 +1268,7 @@
     </children>
     <children xmi:type="notation:Shape" xmi:id="_PCLrVTViEeqPG_FgW3bi6Q" type="2002" fontName=".AppleSystemUIFont">
       <element xmi:type="seff:StopAction" href="teastore.repository#_OFh10TViEeqPG_FgW3bi6Q"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PCLrVjViEeqPG_FgW3bi6Q" x="284" y="372"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PCLrVjViEeqPG_FgW3bi6Q" x="296" y="504"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_QSYH4DViEeqPG_FgW3bi6Q" type="2003" fontName=".AppleSystemUIFont">
       <children xmi:type="notation:DecorationNode" xmi:id="_QSYu8DViEeqPG_FgW3bi6Q" type="5002"/>
@@ -1127,7 +1300,55 @@
         <styles xmi:type="notation:FilteringStyle" xmi:id="_QSYu-DViEeqPG_FgW3bi6Q"/>
       </children>
       <element xmi:type="seff:ExternalCallAction" href="teastore.repository#_P7sGMDViEeqPG_FgW3bi6Q"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QSYH4TViEeqPG_FgW3bi6Q" x="140" y="150"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QSYH4TViEeqPG_FgW3bi6Q" x="148" y="72"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_lT2G0LRnEeqBG67dKda_bQ" type="2006" fontName=".AppleSystemUIFont">
+      <children xmi:type="notation:DecorationNode" xmi:id="_lT2t4LRnEeqBG67dKda_bQ" type="5012"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_lT2t4bRnEeqBG67dKda_bQ" type="7012">
+        <children xmi:type="notation:Node" xmi:id="_pA4ZQLRnEeqBG67dKda_bQ" type="3051">
+          <element xmi:type="seff_performance:ParametricResourceDemand" href="teastore.repository#//@components__Repository.2/@serviceEffectSpecifications__BasicComponent.4/@steps_Behaviour.3/@resourceDemand_Action.0"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_pA4ZQbRnEeqBG67dKda_bQ"/>
+        </children>
+        <styles xmi:type="notation:TitleStyle" xmi:id="_lT2t4rRnEeqBG67dKda_bQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_lT2t47RnEeqBG67dKda_bQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_lT2t5LRnEeqBG67dKda_bQ"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_lT2t5bRnEeqBG67dKda_bQ" type="7046">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_lT2t5rRnEeqBG67dKda_bQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_lT2t57RnEeqBG67dKda_bQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_lT2t6LRnEeqBG67dKda_bQ"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_lT2t6bRnEeqBG67dKda_bQ" type="7051">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_lT2t6rRnEeqBG67dKda_bQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_lT2t67RnEeqBG67dKda_bQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_lT2t7LRnEeqBG67dKda_bQ"/>
+      </children>
+      <element xmi:type="seff:InternalAction" href="teastore.repository#_lTsV0LRnEeqBG67dKda_bQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lT2G0bRnEeqBG67dKda_bQ" x="152" y="336"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="__ETZQLTMEeqYI7n2jTg1Ag" type="2006" fontName=".AppleSystemUIFont">
+      <children xmi:type="notation:DecorationNode" xmi:id="__EUAULTMEeqYI7n2jTg1Ag" type="5012"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="__EUAUbTMEeqYI7n2jTg1Ag" type="7012">
+        <children xmi:type="notation:Node" xmi:id="_AQLWgLTNEeqYI7n2jTg1Ag" type="3051">
+          <element xmi:type="seff_performance:ParametricResourceDemand" href="teastore.repository#//@components__Repository.2/@serviceEffectSpecifications__BasicComponent.4/@steps_Behaviour.4/@resourceDemand_Action.0"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_AQLWgbTNEeqYI7n2jTg1Ag"/>
+        </children>
+        <styles xmi:type="notation:TitleStyle" xmi:id="__EUAUrTMEeqYI7n2jTg1Ag" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="__EUAU7TMEeqYI7n2jTg1Ag"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="__EUAVLTMEeqYI7n2jTg1Ag"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="__EUAVbTMEeqYI7n2jTg1Ag" type="7046">
+        <styles xmi:type="notation:TitleStyle" xmi:id="__EUAVrTMEeqYI7n2jTg1Ag" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="__EUAV7TMEeqYI7n2jTg1Ag"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="__EUAWLTMEeqYI7n2jTg1Ag"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="__EUAWbTMEeqYI7n2jTg1Ag" type="7051">
+        <styles xmi:type="notation:TitleStyle" xmi:id="__EUAWrTMEeqYI7n2jTg1Ag" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="__EUAW7TMEeqYI7n2jTg1Ag"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="__EUAXLTMEeqYI7n2jTg1Ag"/>
+      </children>
+      <element xmi:type="seff:InternalAction" href="teastore.repository#__EMrkLTMEeqYI7n2jTg1Ag"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="__ETZQbTMEeqYI7n2jTg1Ag" x="312" y="240"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_O8t8gTViEeqPG_FgW3bi6Q"/>
     <element xmi:type="seff:ResourceDemandingSEFF" href="teastore.repository#_NV690DViEeqPG_FgW3bi6Q"/>
@@ -1137,11 +1358,23 @@
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_U_UYIjViEeqPG_FgW3bi6Q" points="[7, 4, -227, -147]$[229, 140, -5, -11]"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_U_VmQDViEeqPG_FgW3bi6Q" id="(0.41923076923076924,0.09482758620689655)"/>
     </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_Vfo28DViEeqPG_FgW3bi6Q" type="4001" source="_QSYH4DViEeqPG_FgW3bi6Q" target="_PCLrVTViEeqPG_FgW3bi6Q">
-      <styles xmi:type="notation:FontStyle" xmi:id="_Vfo28TViEeqPG_FgW3bi6Q" fontName=".AppleSystemUIFont"/>
+    <edges xmi:type="notation:Connector" xmi:id="_oNMSgLRnEeqBG67dKda_bQ" type="4001" source="_lT2G0LRnEeqBG67dKda_bQ" target="_PCLrVTViEeqPG_FgW3bi6Q">
+      <styles xmi:type="notation:FontStyle" xmi:id="_oNMSgbRnEeqBG67dKda_bQ" fontName=".AppleSystemUIFont"/>
       <element xsi:nil="true"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Vfo28jViEeqPG_FgW3bi6Q" points="[-3, 98, -2, -121]$[-12, 208, -11, -11]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_VfpeADViEeqPG_FgW3bi6Q" id="(0.6153846153846154,0.15517241379310345)"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oNMSgrRnEeqBG67dKda_bQ" points="[-10, 42, 10, -35]$[-9, 84, 11, 7]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_BDBIsLTNEeqYI7n2jTg1Ag" type="4001" source="_QSYH4DViEeqPG_FgW3bi6Q" target="__ETZQLTMEeqYI7n2jTg1Ag">
+      <styles xmi:type="notation:FontStyle" xmi:id="_BDBIsbTNEeqYI7n2jTg1Ag" fontName=".AppleSystemUIFont"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BDBIsrTNEeqYI7n2jTg1Ag" points="[48, 95, -38, -73]$[83, 147, -3, -21]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BDEzELTNEeqYI7n2jTg1Ag" id="(0.5346153846153846,0.1810344827586207)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BDEzEbTNEeqYI7n2jTg1Ag" id="(0.4728682170542636,0.21)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_BSAm8LTNEeqYI7n2jTg1Ag" type="4001" source="__ETZQLTMEeqYI7n2jTg1Ag" target="_lT2G0LRnEeqBG67dKda_bQ">
+      <styles xmi:type="notation:FontStyle" xmi:id="_BSAm8bTNEeqYI7n2jTg1Ag" fontName=".AppleSystemUIFont"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BSAm8rTNEeqYI7n2jTg1Ag" points="[-75, 57, 96, -79]$[-126, 86, 45, -50]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BSB1ELTNEeqYI7n2jTg1Ag" id="(0.5813953488372093,0.1)"/>
     </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_nCH2QDViEeqPG_FgW3bi6Q" type="PCM SEFF Model" measurementUnit="Pixel">
@@ -1162,9 +1395,9 @@
         <children xmi:type="notation:Node" xmi:id="_oiSogDViEeqPG_FgW3bi6Q" type="3042">
           <children xmi:type="notation:DecorationNode" xmi:id="_oiSohTViEeqPG_FgW3bi6Q" type="5040"/>
           <children xmi:type="notation:BasicCompartment" xmi:id="_oiSohjViEeqPG_FgW3bi6Q" type="7037">
-            <children xmi:type="notation:Node" xmi:id="_ph5rYDViEeqPG_FgW3bi6Q" type="3033">
+            <children xmi:type="notation:Node" xmi:id="_DY2acLSHEeqBG67dKda_bQ" type="3033">
               <element xmi:type="parameter:VariableCharacterisation" href="teastore.repository#//@components__Repository.2/@serviceEffectSpecifications__BasicComponent.5/@steps_Behaviour.2/@inputVariableUsages__CallAction.0/@variableCharacterisation_VariableUsage.0"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_ph5rYTViEeqPG_FgW3bi6Q"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_DY2acbSHEeqBG67dKda_bQ"/>
             </children>
             <styles xmi:type="notation:TitleStyle" xmi:id="_oiSohzViEeqPG_FgW3bi6Q" showTitle="true"/>
             <styles xmi:type="notation:SortingStyle" xmi:id="_oiSoiDViEeqPG_FgW3bi6Q"/>
@@ -1175,6 +1408,23 @@
           <styles xmi:type="notation:LineStyle" xmi:id="_oiSogzViEeqPG_FgW3bi6Q"/>
           <element xmi:type="parameter:VariableUsage" href="teastore.repository#//@components__Repository.2/@serviceEffectSpecifications__BasicComponent.5/@steps_Behaviour.2/@inputVariableUsages__CallAction.0"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oiSohDViEeqPG_FgW3bi6Q"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_EOC9ELSHEeqBG67dKda_bQ" type="3042">
+          <children xmi:type="notation:DecorationNode" xmi:id="_EOC9FbSHEeqBG67dKda_bQ" type="5040"/>
+          <children xmi:type="notation:BasicCompartment" xmi:id="_EOC9FrSHEeqBG67dKda_bQ" type="7037">
+            <children xmi:type="notation:Node" xmi:id="_E9Ks4LSHEeqBG67dKda_bQ" type="3033">
+              <element xmi:type="parameter:VariableCharacterisation" href="teastore.repository#//@components__Repository.2/@serviceEffectSpecifications__BasicComponent.5/@steps_Behaviour.2/@inputVariableUsages__CallAction.1/@variableCharacterisation_VariableUsage.0"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_E9Ks4bSHEeqBG67dKda_bQ"/>
+            </children>
+            <styles xmi:type="notation:TitleStyle" xmi:id="_EOC9F7SHEeqBG67dKda_bQ" showTitle="true"/>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_EOC9GLSHEeqBG67dKda_bQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_EOC9GbSHEeqBG67dKda_bQ"/>
+          </children>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_EOC9EbSHEeqBG67dKda_bQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_EOC9ErSHEeqBG67dKda_bQ" fontName=".AppleSystemUIFont"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_EOC9E7SHEeqBG67dKda_bQ"/>
+          <element xmi:type="parameter:VariableUsage" href="teastore.repository#//@components__Repository.2/@serviceEffectSpecifications__BasicComponent.5/@steps_Behaviour.2/@inputVariableUsages__CallAction.1"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EOC9FLSHEeqBG67dKda_bQ"/>
         </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_n7WkVDViEeqPG_FgW3bi6Q" showTitle="true"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_n7WkVTViEeqPG_FgW3bi6Q"/>
@@ -1222,9 +1472,9 @@
         <children xmi:type="notation:Node" xmi:id="_TzofcDbTEeq5L_FI-wfNWQ" type="3042">
           <children xmi:type="notation:DecorationNode" xmi:id="_TzofdTbTEeq5L_FI-wfNWQ" type="5040"/>
           <children xmi:type="notation:BasicCompartment" xmi:id="_TzofdjbTEeq5L_FI-wfNWQ" type="7037">
-            <children xmi:type="notation:Node" xmi:id="_WO6PEDbTEeq5L_FI-wfNWQ" type="3033">
+            <children xmi:type="notation:Node" xmi:id="_KPO6QK1yEeqcvaJ1A892dQ" type="3033">
               <element xmi:type="parameter:VariableCharacterisation" href="teastore.repository#//@components__Repository.4/@serviceEffectSpecifications__BasicComponent.1/@steps_Behaviour.2/@inputVariableUsages__CallAction.0/@variableCharacterisation_VariableUsage.0"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_WO6PETbTEeq5L_FI-wfNWQ"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_KPO6Qa1yEeqcvaJ1A892dQ"/>
             </children>
             <styles xmi:type="notation:TitleStyle" xmi:id="_TzofdzbTEeq5L_FI-wfNWQ" showTitle="true"/>
             <styles xmi:type="notation:SortingStyle" xmi:id="_TzofeDbTEeq5L_FI-wfNWQ"/>
@@ -1236,6 +1486,23 @@
           <element xmi:type="parameter:VariableUsage" href="teastore.repository#//@components__Repository.4/@serviceEffectSpecifications__BasicComponent.1/@steps_Behaviour.2/@inputVariableUsages__CallAction.0"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TzofdDbTEeq5L_FI-wfNWQ"/>
         </children>
+        <children xmi:type="notation:Node" xmi:id="_V_MqgLSHEeqBG67dKda_bQ" type="3042">
+          <children xmi:type="notation:DecorationNode" xmi:id="_V_MqhbSHEeqBG67dKda_bQ" type="5040"/>
+          <children xmi:type="notation:BasicCompartment" xmi:id="_V_MqhrSHEeqBG67dKda_bQ" type="7037">
+            <children xmi:type="notation:Node" xmi:id="_Wm15ULSHEeqBG67dKda_bQ" type="3033">
+              <element xmi:type="parameter:VariableCharacterisation" href="teastore.repository#//@components__Repository.4/@serviceEffectSpecifications__BasicComponent.1/@steps_Behaviour.2/@inputVariableUsages__CallAction.1/@variableCharacterisation_VariableUsage.0"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_Wm15UbSHEeqBG67dKda_bQ"/>
+            </children>
+            <styles xmi:type="notation:TitleStyle" xmi:id="_V_Mqh7SHEeqBG67dKda_bQ" showTitle="true"/>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_V_MqiLSHEeqBG67dKda_bQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_V_MqibSHEeqBG67dKda_bQ"/>
+          </children>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_V_MqgbSHEeqBG67dKda_bQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_V_MqgrSHEeqBG67dKda_bQ" fontName=".AppleSystemUIFont"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_V_Mqg7SHEeqBG67dKda_bQ"/>
+          <element xmi:type="parameter:VariableUsage" href="teastore.repository#//@components__Repository.4/@serviceEffectSpecifications__BasicComponent.1/@steps_Behaviour.2/@inputVariableUsages__CallAction.1"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_V_MqhLSHEeqBG67dKda_bQ"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_S6f4AjbTEeq5L_FI-wfNWQ" showTitle="true"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_S6f4AzbTEeq5L_FI-wfNWQ"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_S6f4BDbTEeq5L_FI-wfNWQ"/>
@@ -1246,21 +1513,52 @@
         <styles xmi:type="notation:FilteringStyle" xmi:id="_S6f4CDbTEeq5L_FI-wfNWQ"/>
       </children>
       <element xmi:type="seff:ExternalCallAction" href="teastore.repository#_SffXADbTEeq5L_FI-wfNWQ"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_S6fQ8TbTEeq5L_FI-wfNWQ" x="255" y="93"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_S6fQ8TbTEeq5L_FI-wfNWQ" x="180" y="216"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_GrAkkK19EeqcvaJ1A892dQ" type="2006" fontName=".AppleSystemUIFont">
+      <children xmi:type="notation:DecorationNode" xmi:id="_GrBLoK19EeqcvaJ1A892dQ" type="5012"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_GrBLoa19EeqcvaJ1A892dQ" type="7012">
+        <children xmi:type="notation:Node" xmi:id="_3v6BwK19EeqcvaJ1A892dQ" type="3051">
+          <element xmi:type="seff_performance:ParametricResourceDemand" href="teastore.repository#//@components__Repository.4/@serviceEffectSpecifications__BasicComponent.1/@steps_Behaviour.3/@resourceDemand_Action.0"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_3v6Bwa19EeqcvaJ1A892dQ"/>
+        </children>
+        <styles xmi:type="notation:TitleStyle" xmi:id="_GrBLoq19EeqcvaJ1A892dQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_GrBLo619EeqcvaJ1A892dQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_GrBLpK19EeqcvaJ1A892dQ"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_GrBLpa19EeqcvaJ1A892dQ" type="7046">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_GrBLpq19EeqcvaJ1A892dQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_GrBLp619EeqcvaJ1A892dQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_GrBLqK19EeqcvaJ1A892dQ"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_GrBLqa19EeqcvaJ1A892dQ" type="7051">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_GrBLqq19EeqcvaJ1A892dQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_GrBLq619EeqcvaJ1A892dQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_GrBLrK19EeqcvaJ1A892dQ"/>
+      </children>
+      <element xmi:type="seff:InternalAction" href="teastore.repository#_Gq_WcK19EeqcvaJ1A892dQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GrAkka19EeqcvaJ1A892dQ" x="192" y="87"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_RayYwTbTEeq5L_FI-wfNWQ"/>
     <element xmi:type="seff:ResourceDemandingSEFF" href="teastore.repository#_QrkiUDbTEeq5L_FI-wfNWQ"/>
-    <edges xmi:type="notation:Connector" xmi:id="_Yb2nwDbTEeq5L_FI-wfNWQ" type="4001" source="_RdUIUDbTEeq5L_FI-wfNWQ" target="_S6fQ8DbTEeq5L_FI-wfNWQ">
-      <styles xmi:type="notation:FontStyle" xmi:id="_Yb2nwTbTEeq5L_FI-wfNWQ" fontName=".AppleSystemUIFont"/>
-      <element xsi:nil="true"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Yb2nwjbTEeq5L_FI-wfNWQ" points="[9, 1, -377, -91]$[389, 83, 3, -9]"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Yb4c8DbTEeq5L_FI-wfNWQ" id="(0.5793650793650794,0.07758620689655173)"/>
-    </edges>
     <edges xmi:type="notation:Connector" xmi:id="_ZKeoUDbTEeq5L_FI-wfNWQ" type="4001" source="_S6fQ8DbTEeq5L_FI-wfNWQ" target="_RdUIVTbTEeq5L_FI-wfNWQ">
       <styles xmi:type="notation:FontStyle" xmi:id="_ZKeoUTbTEeq5L_FI-wfNWQ" fontName=".AppleSystemUIFont"/>
       <element xsi:nil="true"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZKeoUjbTEeq5L_FI-wfNWQ" points="[32, 105, -30, -102]$[74, 212, 12, 5]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZKgdgDbTEeq5L_FI-wfNWQ" id="(0.8333333333333334,0.09482758620689655)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_Hyd74K19EeqcvaJ1A892dQ" type="4001" source="_RdUIUDbTEeq5L_FI-wfNWQ" target="_GrAkkK19EeqcvaJ1A892dQ">
+      <styles xmi:type="notation:FontStyle" xmi:id="_Hyd74a19EeqcvaJ1A892dQ" fontName=".AppleSystemUIFont"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Hyd74q19EeqcvaJ1A892dQ" points="[8, 2, -230, -94]$[235, 77, -3, -19]"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HyfxEK19EeqcvaJ1A892dQ" id="(0.4728682170542636,0.2261904761904762)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_IExz4K19EeqcvaJ1A892dQ" type="4001" source="_GrAkkK19EeqcvaJ1A892dQ" target="_S6fQ8DbTEeq5L_FI-wfNWQ">
+      <styles xmi:type="notation:FontStyle" xmi:id="_IExz4a19EeqcvaJ1A892dQ" fontName=".AppleSystemUIFont"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IExz4q19EeqcvaJ1A892dQ" points="[7, 65, -8, -66]$[5, 110, -10, -21]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IE0QIK19EeqcvaJ1A892dQ" id="(0.6434108527131783,0.2261904761904762)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IE0QIa19EeqcvaJ1A892dQ" id="(0.4365079365079365,0.1810344827586207)"/>
     </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_bqtwcDbTEeq5L_FI-wfNWQ" type="PCM SEFF Model" measurementUnit="Pixel">
@@ -1425,7 +1723,7 @@
     </children>
     <children xmi:type="notation:Shape" xmi:id="_p3GSdTbaEeq5L_FI-wfNWQ" type="2002" fontName=".AppleSystemUIFont">
       <element xmi:type="seff:StopAction" href="teastore.repository#_xloSQDVXEeqPG_FgW3bi6Q"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p3GSdjbaEeq5L_FI-wfNWQ" x="336" y="200"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p3GSdjbaEeq5L_FI-wfNWQ" x="472" y="448"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="__uiGgDbfEeq5L_FI-wfNWQ" type="2003" fontName=".AppleSystemUIFont">
       <children xmi:type="notation:DecorationNode" xmi:id="__uitkDbfEeq5L_FI-wfNWQ" type="5002"/>
@@ -1459,6 +1757,55 @@
       <element xmi:type="seff:ExternalCallAction" href="teastore.repository#__VQD0DbfEeq5L_FI-wfNWQ"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="__uiGgTbfEeq5L_FI-wfNWQ" x="88" y="80"/>
     </children>
+    <children xmi:type="notation:Shape" xmi:id="_Qk6YAK10EeqcvaJ1A892dQ" type="2003" fontName=".AppleSystemUIFont">
+      <children xmi:type="notation:DecorationNode" xmi:id="_Qk6YAq10EeqcvaJ1A892dQ" type="5002"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_Qk6YA610EeqcvaJ1A892dQ" type="7001">
+        <children xmi:type="notation:Node" xmi:id="_dwZn4LSFEeqBG67dKda_bQ" type="3042">
+          <children xmi:type="notation:DecorationNode" xmi:id="_dwaO9LSFEeqBG67dKda_bQ" type="5040"/>
+          <children xmi:type="notation:BasicCompartment" xmi:id="_dwaO9bSFEeqBG67dKda_bQ" type="7037">
+            <children xmi:type="notation:Node" xmi:id="_f7niQLSFEeqBG67dKda_bQ" type="3033">
+              <element xmi:type="parameter:VariableCharacterisation" href="teastore.repository#//@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.3/@inputVariableUsages__CallAction.0/@variableCharacterisation_VariableUsage.0"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_f7niQbSFEeqBG67dKda_bQ"/>
+            </children>
+            <styles xmi:type="notation:TitleStyle" xmi:id="_dwaO9rSFEeqBG67dKda_bQ" showTitle="true"/>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_dwaO97SFEeqBG67dKda_bQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_dwaO-LSFEeqBG67dKda_bQ"/>
+          </children>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_dwaO8LSFEeqBG67dKda_bQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_dwaO8bSFEeqBG67dKda_bQ" fontName=".AppleSystemUIFont"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_dwaO8rSFEeqBG67dKda_bQ"/>
+          <element xmi:type="parameter:VariableUsage" href="teastore.repository#//@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.3/@inputVariableUsages__CallAction.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dwaO87SFEeqBG67dKda_bQ"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_axz6YLSGEeqBG67dKda_bQ" type="3042">
+          <children xmi:type="notation:DecorationNode" xmi:id="_axz6ZbSGEeqBG67dKda_bQ" type="5040"/>
+          <children xmi:type="notation:BasicCompartment" xmi:id="_axz6ZrSGEeqBG67dKda_bQ" type="7037">
+            <children xmi:type="notation:Node" xmi:id="_br9OcLSGEeqBG67dKda_bQ" type="3033">
+              <element xmi:type="parameter:VariableCharacterisation" href="teastore.repository#//@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.3/@inputVariableUsages__CallAction.1/@variableCharacterisation_VariableUsage.0"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_br9OcbSGEeqBG67dKda_bQ"/>
+            </children>
+            <styles xmi:type="notation:TitleStyle" xmi:id="_axz6Z7SGEeqBG67dKda_bQ" showTitle="true"/>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_axz6aLSGEeqBG67dKda_bQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_axz6abSGEeqBG67dKda_bQ"/>
+          </children>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_axz6YbSGEeqBG67dKda_bQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_axz6YrSGEeqBG67dKda_bQ" fontName=".AppleSystemUIFont"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_axz6Y7SGEeqBG67dKda_bQ"/>
+          <element xmi:type="parameter:VariableUsage" href="teastore.repository#//@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.3/@inputVariableUsages__CallAction.1"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_axz6ZLSGEeqBG67dKda_bQ"/>
+        </children>
+        <styles xmi:type="notation:TitleStyle" xmi:id="_Qk6YBK10EeqcvaJ1A892dQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_Qk6YBa10EeqcvaJ1A892dQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_Qk6YBq10EeqcvaJ1A892dQ"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_Qk6YB610EeqcvaJ1A892dQ" type="7021">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_Qk6YCK10EeqcvaJ1A892dQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_Qk6YCa10EeqcvaJ1A892dQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_Qk6YCq10EeqcvaJ1A892dQ"/>
+      </children>
+      <element xmi:type="seff:ExternalCallAction" href="teastore.repository#_QQ_9gK10EeqcvaJ1A892dQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Qk6YAa10EeqcvaJ1A892dQ" x="168" y="296"/>
+    </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_p0mYETbaEeq5L_FI-wfNWQ"/>
     <element xmi:type="seff:ResourceDemandingSEFF" href="teastore.repository#_xliLoDVXEeqPG_FgW3bi6Q"/>
     <edges xmi:type="notation:Connector" xmi:id="_AMkGUDbgEeq5L_FI-wfNWQ" type="4001" source="_p3GScDbaEeq5L_FI-wfNWQ" target="__uiGgDbfEeq5L_FI-wfNWQ">
@@ -1466,11 +1813,17 @@
       <element xsi:nil="true"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_AMkGUjbgEeq5L_FI-wfNWQ" points="[8, 3, -168, -100]$[248, 70, 72, -33]"/>
     </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_AhM5kDbgEeq5L_FI-wfNWQ" type="4001" source="__uiGgDbfEeq5L_FI-wfNWQ" target="_p3GSdTbaEeq5L_FI-wfNWQ">
-      <styles xmi:type="notation:FontStyle" xmi:id="_AhM5kTbgEeq5L_FI-wfNWQ" fontName=".AppleSystemUIFont"/>
+    <edges xmi:type="notation:Connector" xmi:id="_RCH4cK10EeqcvaJ1A892dQ" type="4001" source="__uiGgDbfEeq5L_FI-wfNWQ" target="_Qk6YAK10EeqcvaJ1A892dQ">
+      <styles xmi:type="notation:FontStyle" xmi:id="_RCH4ca10EeqcvaJ1A892dQ" fontName=".AppleSystemUIFont"/>
       <element xsi:nil="true"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_AhM5kjbgEeq5L_FI-wfNWQ" points="[57, 50, -79, -69]$[147, 127, 11, 8]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_AhOHsDbgEeq5L_FI-wfNWQ" id="(0.616504854368932,0.24242424242424243)"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_RCH4cq10EeqcvaJ1A892dQ" points="[44, 96, -18, -133]$[182, 198, 120, -31]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_RCJGkK10EeqcvaJ1A892dQ" id="(0.6571428571428571,0.1724137931034483)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_RUO8IK10EeqcvaJ1A892dQ" type="4001" source="_Qk6YAK10EeqcvaJ1A892dQ" target="_p3GSdTbaEeq5L_FI-wfNWQ">
+      <styles xmi:type="notation:FontStyle" xmi:id="_RUO8Ia10EeqcvaJ1A892dQ" fontName=".AppleSystemUIFont"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_RUO8Iq10EeqcvaJ1A892dQ" points="[49, 33, -161, -108]$[214, 143, 4, 2]"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_RUPjMK10EeqcvaJ1A892dQ" id="(0.8666666666666667,0.7333333333333333)"/>
     </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_Bn-7cDbgEeq5L_FI-wfNWQ" type="PCM SEFF Model" measurementUnit="Pixel">
@@ -1483,35 +1836,71 @@
     </children>
     <children xmi:type="notation:Shape" xmi:id="_BpCrZTbgEeq5L_FI-wfNWQ" type="2002" fontName=".AppleSystemUIFont">
       <element xmi:type="seff:StopAction" href="teastore.repository#_xlpgYjVXEeqPG_FgW3bi6Q"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BpCrZjbgEeq5L_FI-wfNWQ" x="352" y="168"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BpCrZjbgEeq5L_FI-wfNWQ" x="368" y="408"/>
     </children>
-    <children xmi:type="notation:Shape" xmi:id="_C6VUIDbgEeq5L_FI-wfNWQ" type="2003" fontName=".AppleSystemUIFont">
-      <children xmi:type="notation:DecorationNode" xmi:id="_C6VUIjbgEeq5L_FI-wfNWQ" type="5002"/>
-      <children xmi:type="notation:BasicCompartment" xmi:id="_C6VUIzbgEeq5L_FI-wfNWQ" type="7001">
-        <styles xmi:type="notation:TitleStyle" xmi:id="_C6VUJDbgEeq5L_FI-wfNWQ" showTitle="true"/>
-        <styles xmi:type="notation:SortingStyle" xmi:id="_C6VUJTbgEeq5L_FI-wfNWQ"/>
-        <styles xmi:type="notation:FilteringStyle" xmi:id="_C6VUJjbgEeq5L_FI-wfNWQ"/>
+    <children xmi:type="notation:Shape" xmi:id="_Ebko4KpZEeqHXcsU55mirw" type="2004" fontName=".AppleSystemUIFont">
+      <children xmi:type="notation:DecorationNode" xmi:id="_EblP8KpZEeqHXcsU55mirw" type="5009"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_EblP8apZEeqHXcsU55mirw" type="5010"/>
+      <children xmi:type="notation:Shape" xmi:id="_EbmeEKpZEeqHXcsU55mirw" type="3003" fontName=".AppleSystemUIFont">
+        <children xmi:type="notation:DecorationNode" xmi:id="_EbmeEqpZEeqHXcsU55mirw" type="7004">
+          <children xmi:type="notation:Node" xmi:id="_EbnsMKpZEeqHXcsU55mirw" type="3004">
+            <styles xmi:type="notation:DescriptionStyle" xmi:id="_EbnsMapZEeqHXcsU55mirw"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_EbnsMqpZEeqHXcsU55mirw" fontName=".AppleSystemUIFont"/>
+            <styles xmi:type="notation:LineStyle" xmi:id="_EbnsM6pZEeqHXcsU55mirw"/>
+            <element xmi:type="seff:StartAction" href="teastore.repository#_EbgXcKpZEeqHXcsU55mirw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EbnsNKpZEeqHXcsU55mirw" y="2"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_EbnsNapZEeqHXcsU55mirw" type="3005" fontName=".AppleSystemUIFont">
+            <element xmi:type="seff:StopAction" href="teastore.repository#_Ebg-gKpZEeqHXcsU55mirw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EbnsNqpZEeqHXcsU55mirw" x="167" y="127"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_C6VUIDbgEeq5L_FI-wfNWQ" type="3012" fontName=".AppleSystemUIFont">
+            <children xmi:type="notation:DecorationNode" xmi:id="_G0OiUqpZEeqHXcsU55mirw" type="5006"/>
+            <children xmi:type="notation:BasicCompartment" xmi:id="_G0PJYKpZEeqHXcsU55mirw" type="7010">
+              <styles xmi:type="notation:TitleStyle" xmi:id="_G0PJYapZEeqHXcsU55mirw" showTitle="true"/>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_G0PJYqpZEeqHXcsU55mirw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_G0PJY6pZEeqHXcsU55mirw"/>
+            </children>
+            <children xmi:type="notation:BasicCompartment" xmi:id="_G0PJZKpZEeqHXcsU55mirw" type="7023">
+              <styles xmi:type="notation:TitleStyle" xmi:id="_G0PJZapZEeqHXcsU55mirw" showTitle="true"/>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_G0PJZqpZEeqHXcsU55mirw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_G0PJZ6pZEeqHXcsU55mirw"/>
+            </children>
+            <element xmi:type="seff:ExternalCallAction" href="teastore.repository#_CgFBEDbgEeq5L_FI-wfNWQ"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C6VUITbgEeq5L_FI-wfNWQ" x="19" y="31"/>
+          </children>
+        </children>
+        <element xmi:type="seff:ResourceDemandingBehaviour" href="teastore.repository#_EbeiQKpZEeqHXcsU55mirw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EbmeEapZEeqHXcsU55mirw"/>
       </children>
-      <children xmi:type="notation:BasicCompartment" xmi:id="_C6VUJzbgEeq5L_FI-wfNWQ" type="7021">
-        <styles xmi:type="notation:TitleStyle" xmi:id="_C6VUKDbgEeq5L_FI-wfNWQ" showTitle="true"/>
-        <styles xmi:type="notation:SortingStyle" xmi:id="_C6VUKTbgEeq5L_FI-wfNWQ"/>
-        <styles xmi:type="notation:FilteringStyle" xmi:id="_C6VUKjbgEeq5L_FI-wfNWQ"/>
-      </children>
-      <element xmi:type="seff:ExternalCallAction" href="teastore.repository#_CgFBEDbgEeq5L_FI-wfNWQ"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C6VUITbgEeq5L_FI-wfNWQ" x="112" y="72"/>
+      <element xmi:type="seff:LoopAction" href="teastore.repository#_EbUxQKpZEeqHXcsU55mirw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ebko4apZEeqHXcsU55mirw" x="72" y="200" width="253" height="233"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_Bn-7cTbgEeq5L_FI-wfNWQ"/>
     <element xmi:type="seff:ResourceDemandingSEFF" href="teastore.repository#_xlpgYDVXEeqPG_FgW3bi6Q"/>
-    <edges xmi:type="notation:Connector" xmi:id="_DbKwUDbgEeq5L_FI-wfNWQ" type="4001" source="_BpCrYDbgEeq5L_FI-wfNWQ" target="_C6VUIDbgEeq5L_FI-wfNWQ">
-      <styles xmi:type="notation:FontStyle" xmi:id="_DbKwUTbgEeq5L_FI-wfNWQ" fontName=".AppleSystemUIFont"/>
+    <edges xmi:type="notation:Connector" xmi:id="_Hj4doKpZEeqHXcsU55mirw" type="4001" source="_EbnsMKpZEeqHXcsU55mirw" target="_C6VUIDbgEeq5L_FI-wfNWQ">
+      <styles xmi:type="notation:FontStyle" xmi:id="_Hj4doapZEeqHXcsU55mirw" fontName=".AppleSystemUIFont"/>
       <element xsi:nil="true"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_DbKwUjbgEeq5L_FI-wfNWQ" points="[8, 2, -217, -75]$[242, 62, 17, -15]"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DbLXYDbgEeq5L_FI-wfNWQ" id="(0.6009389671361502,0.22727272727272727)"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Hj4doqpZEeqHXcsU55mirw" points="[17, 6, -105, -55]$[122, 28, 0, -33]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Hj6S0KpZEeqHXcsU55mirw" id="(0.15,0.05)"/>
     </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_DttR0DbgEeq5L_FI-wfNWQ" type="4001" source="_C6VUIDbgEeq5L_FI-wfNWQ" target="_BpCrZTbgEeq5L_FI-wfNWQ">
-      <styles xmi:type="notation:FontStyle" xmi:id="_DttR0TbgEeq5L_FI-wfNWQ" fontName=".AppleSystemUIFont"/>
+    <edges xmi:type="notation:Connector" xmi:id="_H1d84KpZEeqHXcsU55mirw" type="4001" source="_C6VUIDbgEeq5L_FI-wfNWQ" target="_EbnsNapZEeqHXcsU55mirw">
+      <styles xmi:type="notation:FontStyle" xmi:id="_H1d84apZEeqHXcsU55mirw" fontName=".AppleSystemUIFont"/>
       <element xsi:nil="true"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_DttR0jbgEeq5L_FI-wfNWQ" points="[65, 33, -84, -45]$[163, 79, 14, 1]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_H1d84qpZEeqHXcsU55mirw" points="[37, 57, -26, -45]$[77, 98, 14, -4]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_H1fLAKpZEeqHXcsU55mirw" id="(0.4694835680751174,0.13636363636363635)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_IK0h0KpZEeqHXcsU55mirw" type="4001" source="_Ebko4KpZEeqHXcsU55mirw" target="_BpCrZTbgEeq5L_FI-wfNWQ">
+      <styles xmi:type="notation:FontStyle" xmi:id="_IK0h0apZEeqHXcsU55mirw" fontName=".AppleSystemUIFont"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IK0h0qpZEeqHXcsU55mirw" points="[59, 100, -58, -97]$[122, 209, 5, 12]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IK1v8KpZEeqHXcsU55mirw" id="(0.766798418972332,0.11158798283261803)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_IfzTUKpZEeqHXcsU55mirw" type="4001" source="_BpCrYDbgEeq5L_FI-wfNWQ" target="_Ebko4KpZEeqHXcsU55mirw">
+      <styles xmi:type="notation:FontStyle" xmi:id="_IfzTUapZEeqHXcsU55mirw" fontName=".AppleSystemUIFont"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IfzTUqpZEeqHXcsU55mirw" points="[5, 7, -164, -196]$[167, 190, -2, -13]"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Ifz6YKpZEeqHXcsU55mirw" id="(0.4426877470355731,0.055793991416309016)"/>
     </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_ppWioDbgEeq5L_FI-wfNWQ" type="PCM SEFF Model" measurementUnit="Pixel">
@@ -1673,6 +2062,262 @@
       <element xsi:nil="true"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_C1pzAjbhEeq5L_FI-wfNWQ" points="[57, 105, -30, -48]$[88, 167, 1, 14]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_C1qaEDbhEeq5L_FI-wfNWQ" id="(0.5341365461847389,0.09482758620689655)"/>
+    </edges>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_5FmzkKD_Eeqd2ZqeUI3CiQ" type="PCM SEFF Model" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_5FmzkaD_Eeqd2ZqeUI3CiQ"/>
+    <element xmi:type="seff:ResourceDemandingSEFF" href="teastore.repository#_vHaNQDVgEeqPG_FgW3bi6Q"/>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_TxytgKpwEeqHXcsU55mirw" type="PCM SEFF Model" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_ISeeMK1oEeqcvaJ1A892dQ" type="2001">
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_ISeeMa1oEeqcvaJ1A892dQ"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_ISeeMq1oEeqcvaJ1A892dQ" fontName=".AppleSystemUIFont"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_ISeeM61oEeqcvaJ1A892dQ"/>
+      <element xmi:type="seff:StartAction" href="teastore.repository#_lSBcgDVgEeqPG_FgW3bi6Q"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ISeeNK1oEeqcvaJ1A892dQ" x="5"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_ISfFQK1oEeqcvaJ1A892dQ" type="2002" fontName=".AppleSystemUIFont">
+      <element xmi:type="seff:StopAction" href="teastore.repository#_lSBcgTVgEeqPG_FgW3bi6Q"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ISfFQa1oEeqcvaJ1A892dQ" x="328" y="456"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_I-xjgK1oEeqcvaJ1A892dQ" type="2006" fontName=".AppleSystemUIFont">
+      <children xmi:type="notation:DecorationNode" xmi:id="_I-xjgq1oEeqcvaJ1A892dQ" type="5012"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_I-xjg61oEeqcvaJ1A892dQ" type="7012">
+        <children xmi:type="notation:Node" xmi:id="_KVPAIK1oEeqcvaJ1A892dQ" type="3051">
+          <element xmi:type="seff_performance:ParametricResourceDemand" href="teastore.repository#//@components__Repository.6/@serviceEffectSpecifications__BasicComponent.1/@steps_Behaviour.2/@resourceDemand_Action.0"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_KVPAIa1oEeqcvaJ1A892dQ"/>
+        </children>
+        <styles xmi:type="notation:TitleStyle" xmi:id="_I-xjhK1oEeqcvaJ1A892dQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_I-xjha1oEeqcvaJ1A892dQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_I-xjhq1oEeqcvaJ1A892dQ"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_I-yKkK1oEeqcvaJ1A892dQ" type="7046">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_I-yKka1oEeqcvaJ1A892dQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_I-yKkq1oEeqcvaJ1A892dQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_I-yKk61oEeqcvaJ1A892dQ"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_I-yKlK1oEeqcvaJ1A892dQ" type="7051">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_I-yKla1oEeqcvaJ1A892dQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_I-yKlq1oEeqcvaJ1A892dQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_I-yKl61oEeqcvaJ1A892dQ"/>
+      </children>
+      <element xmi:type="seff:InternalAction" href="teastore.repository#_I-vuUK1oEeqcvaJ1A892dQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_I-xjga1oEeqcvaJ1A892dQ" x="207" y="158"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_TxytgapwEeqHXcsU55mirw"/>
+    <element xmi:type="seff:ResourceDemandingSEFF" href="teastore.repository#_lSA1cjVgEeqPG_FgW3bi6Q"/>
+    <edges xmi:type="notation:Connector" xmi:id="_K2IGsK1oEeqcvaJ1A892dQ" type="4001" source="_ISeeMK1oEeqcvaJ1A892dQ" target="_I-xjgK1oEeqcvaJ1A892dQ">
+      <styles xmi:type="notation:FontStyle" xmi:id="_K2IGsa1oEeqcvaJ1A892dQ" fontName=".AppleSystemUIFont"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_K2IGsq1oEeqcvaJ1A892dQ" points="[12, 9, -250, -188]$[253, 147, -9, -50]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_K2J74K1oEeqcvaJ1A892dQ" id="(0.2,0.55)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_LSAxcK1oEeqcvaJ1A892dQ" type="4001" source="_I-xjgK1oEeqcvaJ1A892dQ" target="_ISfFQK1oEeqcvaJ1A892dQ">
+      <styles xmi:type="notation:FontStyle" xmi:id="_LSAxca1oEeqcvaJ1A892dQ" fontName=".AppleSystemUIFont"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_LSAxcq1oEeqcvaJ1A892dQ" points="[18, 78, -48, -213]$[80, 287, 14, -4]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LSB_kK1oEeqcvaJ1A892dQ" id="(0.5426356589147286,0.22)"/>
+    </edges>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_2cQE8KpxEeqHXcsU55mirw" type="PCM SEFF Model" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_q2SicK1mEeqcvaJ1A892dQ" type="2001">
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_q2Sica1mEeqcvaJ1A892dQ"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_q2Sicq1mEeqcvaJ1A892dQ" fontName=".AppleSystemUIFont"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_q2Sic61mEeqcvaJ1A892dQ"/>
+      <element xmi:type="seff:StartAction" href="teastore.repository#_l7sroDVgEeqPG_FgW3bi6Q"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_q2SidK1mEeqcvaJ1A892dQ" x="5"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_q2TwkK1mEeqcvaJ1A892dQ" type="2002" fontName=".AppleSystemUIFont">
+      <element xmi:type="seff:StopAction" href="teastore.repository#_l7sroTVgEeqPG_FgW3bi6Q"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_q2Twka1mEeqcvaJ1A892dQ" x="320" y="516"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_rq7EYK1mEeqcvaJ1A892dQ" type="2006" fontName=".AppleSystemUIFont">
+      <children xmi:type="notation:DecorationNode" xmi:id="_rq7EYq1mEeqcvaJ1A892dQ" type="5012"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_rq7EY61mEeqcvaJ1A892dQ" type="7012">
+        <children xmi:type="notation:Node" xmi:id="_76S2AK1mEeqcvaJ1A892dQ" type="3051">
+          <element xmi:type="seff_performance:ParametricResourceDemand" href="teastore.repository#//@components__Repository.7/@serviceEffectSpecifications__BasicComponent.1/@steps_Behaviour.2/@resourceDemand_Action.0"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_76S2Aa1mEeqcvaJ1A892dQ"/>
+        </children>
+        <styles xmi:type="notation:TitleStyle" xmi:id="_rq7EZK1mEeqcvaJ1A892dQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_rq7EZa1mEeqcvaJ1A892dQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_rq7EZq1mEeqcvaJ1A892dQ"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_rq7EZ61mEeqcvaJ1A892dQ" type="7046">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_rq7EaK1mEeqcvaJ1A892dQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_rq7Eaa1mEeqcvaJ1A892dQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_rq7Eaq1mEeqcvaJ1A892dQ"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_rq7Ea61mEeqcvaJ1A892dQ" type="7051">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_rq7EbK1mEeqcvaJ1A892dQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_rq7Eba1mEeqcvaJ1A892dQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_rq7Ebq1mEeqcvaJ1A892dQ"/>
+      </children>
+      <element xmi:type="seff:InternalAction" href="teastore.repository#_rq4oIK1mEeqcvaJ1A892dQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rq7EYa1mEeqcvaJ1A892dQ" x="174" y="229"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_2cQE8apxEeqHXcsU55mirw"/>
+    <element xmi:type="seff:ResourceDemandingSEFF" href="teastore.repository#_l7sEkzVgEeqPG_FgW3bi6Q"/>
+    <edges xmi:type="notation:Connector" xmi:id="_tPU2YK1mEeqcvaJ1A892dQ" type="4001" source="_q2SicK1mEeqcvaJ1A892dQ" target="_rq7EYK1mEeqcvaJ1A892dQ">
+      <styles xmi:type="notation:FontStyle" xmi:id="_tPU2Ya1mEeqcvaJ1A892dQ" fontName=".AppleSystemUIFont"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_tPU2Yq1mEeqcvaJ1A892dQ" points="[5, 6, -218, -255]$[218, 219, -5, -42]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_tjehcK1mEeqcvaJ1A892dQ" type="4001" source="_rq7EYK1mEeqcvaJ1A892dQ" target="_q2TwkK1mEeqcvaJ1A892dQ">
+      <styles xmi:type="notation:FontStyle" xmi:id="_tjehca1mEeqcvaJ1A892dQ" fontName=".AppleSystemUIFont"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_tjehcq1mEeqcvaJ1A892dQ" points="[16, 42, -81, -218]$[109, 253, 12, -7]"/>
+    </edges>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_vETbAK1mEeqcvaJ1A892dQ" type="PCM SEFF Model" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_3HMScLQAEeq7laWsYbb_3A" type="2001">
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_3HMScbQAEeq7laWsYbb_3A"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_3HMScrQAEeq7laWsYbb_3A" fontName=".AppleSystemUIFont"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_3HMSc7QAEeq7laWsYbb_3A"/>
+      <element xmi:type="seff:StartAction" href="teastore.repository#_lSA1cDVgEeqPG_FgW3bi6Q"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3HMSdLQAEeq7laWsYbb_3A" x="5"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_3HM5gLQAEeq7laWsYbb_3A" type="2002" fontName=".AppleSystemUIFont">
+      <element xmi:type="seff:StopAction" href="teastore.repository#_lSA1cTVgEeqPG_FgW3bi6Q"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3HM5gbQAEeq7laWsYbb_3A" x="352" y="392"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_o_T8ULQBEeq7laWsYbb_3A" type="2006" fontName=".AppleSystemUIFont">
+      <children xmi:type="notation:DecorationNode" xmi:id="_o_T8UrQBEeq7laWsYbb_3A" type="5012"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_o_UjYLQBEeq7laWsYbb_3A" type="7012">
+        <children xmi:type="notation:Node" xmi:id="_sI2gILQBEeq7laWsYbb_3A" type="3051">
+          <element xmi:type="seff_performance:ParametricResourceDemand" href="teastore.repository#//@components__Repository.6/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@resourceDemand_Action.0"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_sI2gIbQBEeq7laWsYbb_3A"/>
+        </children>
+        <styles xmi:type="notation:TitleStyle" xmi:id="_o_UjYbQBEeq7laWsYbb_3A" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_o_UjYrQBEeq7laWsYbb_3A"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_o_UjY7QBEeq7laWsYbb_3A"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_o_UjZLQBEeq7laWsYbb_3A" type="7046">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_o_UjZbQBEeq7laWsYbb_3A" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_o_UjZrQBEeq7laWsYbb_3A"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_o_UjZ7QBEeq7laWsYbb_3A"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_o_UjaLQBEeq7laWsYbb_3A" type="7051">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_o_UjabQBEeq7laWsYbb_3A" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_o_UjarQBEeq7laWsYbb_3A"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_o_Uja7QBEeq7laWsYbb_3A"/>
+      </children>
+      <element xmi:type="seff:InternalAction" href="teastore.repository#_o_OcwLQBEeq7laWsYbb_3A"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_o_T8UbQBEeq7laWsYbb_3A" x="160" y="144"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_vETbAa1mEeqcvaJ1A892dQ"/>
+    <element xmi:type="seff:ResourceDemandingSEFF" href="teastore.repository#_lR_nUDVgEeqPG_FgW3bi6Q"/>
+    <edges xmi:type="notation:Connector" xmi:id="_qnBhALQBEeq7laWsYbb_3A" type="4001" source="_3HMScLQAEeq7laWsYbb_3A" target="_o_T8ULQBEeq7laWsYbb_3A">
+      <styles xmi:type="notation:FontStyle" xmi:id="_qnBhAbQBEeq7laWsYbb_3A" fontName=".AppleSystemUIFont"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qnBhArQBEeq7laWsYbb_3A" points="[13, 11, -203, -166]$[152, 170, -64, -7]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_qnD9QLQBEeq7laWsYbb_3A" id="(0.15,0.45)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_q6yxkLQBEeq7laWsYbb_3A" type="4001" source="_o_T8ULQBEeq7laWsYbb_3A" target="_3HM5gLQAEeq7laWsYbb_3A">
+      <styles xmi:type="notation:FontStyle" xmi:id="_q6yxkbQBEeq7laWsYbb_3A" fontName=".AppleSystemUIFont"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_q6yxkrQBEeq7laWsYbb_3A" points="[27, 42, -116, -179]$[158, 220, 15, -1]"/>
+    </edges>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_eY-bQK1oEeqcvaJ1A892dQ" type="PCM SEFF Model" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_ebzFwK1oEeqcvaJ1A892dQ" type="2001">
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_ebzFwa1oEeqcvaJ1A892dQ"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_ebzFwq1oEeqcvaJ1A892dQ" fontName=".AppleSystemUIFont"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_ebzFw61oEeqcvaJ1A892dQ"/>
+      <element xmi:type="seff:StartAction" href="teastore.repository#_kob6gqpwEeqHXcsU55mirw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ebzFxK1oEeqcvaJ1A892dQ" x="5"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_ebzFxa1oEeqcvaJ1A892dQ" type="2002" fontName=".AppleSystemUIFont">
+      <element xmi:type="seff:StopAction" href="teastore.repository#_kob6g6pwEeqHXcsU55mirw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ebzFxq1oEeqcvaJ1A892dQ" x="356" y="504"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_e9hSwK1oEeqcvaJ1A892dQ" type="2006" fontName=".AppleSystemUIFont">
+      <children xmi:type="notation:DecorationNode" xmi:id="_e9hSwq1oEeqcvaJ1A892dQ" type="5012"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_e9hSw61oEeqcvaJ1A892dQ" type="7012">
+        <children xmi:type="notation:Node" xmi:id="_hIwbQK1oEeqcvaJ1A892dQ" type="3051">
+          <element xmi:type="seff_performance:ParametricResourceDemand" href="teastore.repository#//@components__Repository.11/@serviceEffectSpecifications__BasicComponent.1/@steps_Behaviour.2/@resourceDemand_Action.0"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_hIwbQa1oEeqcvaJ1A892dQ"/>
+        </children>
+        <styles xmi:type="notation:TitleStyle" xmi:id="_e9hSxK1oEeqcvaJ1A892dQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_e9hSxa1oEeqcvaJ1A892dQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_e9hSxq1oEeqcvaJ1A892dQ"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_e9hSx61oEeqcvaJ1A892dQ" type="7046">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_e9hSyK1oEeqcvaJ1A892dQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_e9hSya1oEeqcvaJ1A892dQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_e9hSyq1oEeqcvaJ1A892dQ"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_e9hSy61oEeqcvaJ1A892dQ" type="7051">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_e9hSzK1oEeqcvaJ1A892dQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_e9hSza1oEeqcvaJ1A892dQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_e9hSzq1oEeqcvaJ1A892dQ"/>
+      </children>
+      <element xmi:type="seff:InternalAction" href="teastore.repository#_e9gEoK1oEeqcvaJ1A892dQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_e9hSwa1oEeqcvaJ1A892dQ" x="152" y="169"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_eY-bQa1oEeqcvaJ1A892dQ"/>
+    <element xmi:type="seff:ResourceDemandingSEFF" href="teastore.repository#_kob6gapwEeqHXcsU55mirw"/>
+    <edges xmi:type="notation:Connector" xmi:id="_ftBdEK1oEeqcvaJ1A892dQ" type="4001" source="_ebzFwK1oEeqcvaJ1A892dQ" target="_e9hSwK1oEeqcvaJ1A892dQ">
+      <styles xmi:type="notation:FontStyle" xmi:id="_ftBdEa1oEeqcvaJ1A892dQ" fontName=".AppleSystemUIFont"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ftBdEq1oEeqcvaJ1A892dQ" points="[6, 6, -177, -158]$[180, 159, -3, -5]"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ftDSQK1oEeqcvaJ1A892dQ" id="(0.35658914728682173,0.05952380952380952)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_gAiO8K1oEeqcvaJ1A892dQ" type="4001" source="_e9hSwK1oEeqcvaJ1A892dQ" target="_ebzFxa1oEeqcvaJ1A892dQ">
+      <styles xmi:type="notation:FontStyle" xmi:id="_gAiO8a1oEeqcvaJ1A892dQ" fontName=".AppleSystemUIFont"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_gAiO8q1oEeqcvaJ1A892dQ" points="[32, 67, -127, -266]$[170, 324, 11, -9]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gAi2AK1oEeqcvaJ1A892dQ" id="(0.46511627906976744,0.20238095238095238)"/>
+    </edges>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_-TwV0K1oEeqcvaJ1A892dQ" type="PCM SEFF Model" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_-X_VkK1oEeqcvaJ1A892dQ" type="2001">
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_-X_Vka1oEeqcvaJ1A892dQ"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_-X_Vkq1oEeqcvaJ1A892dQ" fontName=".AppleSystemUIFont"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_-X_Vk61oEeqcvaJ1A892dQ"/>
+      <element xmi:type="seff:StartAction" href="teastore.repository#_vHbbYTVgEeqPG_FgW3bi6Q"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-X_VlK1oEeqcvaJ1A892dQ" x="5"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_-X_Vla1oEeqcvaJ1A892dQ" type="2002" fontName=".AppleSystemUIFont">
+      <element xmi:type="seff:StopAction" href="teastore.repository#_vHbbYjVgEeqPG_FgW3bi6Q"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-X_Vlq1oEeqcvaJ1A892dQ" x="404" y="436"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="__RHV8K1oEeqcvaJ1A892dQ" type="2006" fontName=".AppleSystemUIFont">
+      <children xmi:type="notation:DecorationNode" xmi:id="__RHV8q1oEeqcvaJ1A892dQ" type="5012"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="__RHV861oEeqcvaJ1A892dQ" type="7012">
+        <children xmi:type="notation:Node" xmi:id="_AfGMAK1pEeqcvaJ1A892dQ" type="3051">
+          <element xmi:type="seff_performance:ParametricResourceDemand" href="teastore.repository#//@components__Repository.9/@serviceEffectSpecifications__BasicComponent.1/@steps_Behaviour.2/@resourceDemand_Action.0"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_AfGMAa1pEeqcvaJ1A892dQ"/>
+        </children>
+        <styles xmi:type="notation:TitleStyle" xmi:id="__RHV9K1oEeqcvaJ1A892dQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="__RHV9a1oEeqcvaJ1A892dQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="__RHV9q1oEeqcvaJ1A892dQ"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="__RHV961oEeqcvaJ1A892dQ" type="7046">
+        <styles xmi:type="notation:TitleStyle" xmi:id="__RHV-K1oEeqcvaJ1A892dQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="__RHV-a1oEeqcvaJ1A892dQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="__RHV-q1oEeqcvaJ1A892dQ"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="__RHV-61oEeqcvaJ1A892dQ" type="7051">
+        <styles xmi:type="notation:TitleStyle" xmi:id="__RHV_K1oEeqcvaJ1A892dQ" showTitle="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="__RHV_a1oEeqcvaJ1A892dQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="__RHV_q1oEeqcvaJ1A892dQ"/>
+      </children>
+      <element xmi:type="seff:InternalAction" href="teastore.repository#__RGH0K1oEeqcvaJ1A892dQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="__RHV8a1oEeqcvaJ1A892dQ" x="212" y="160"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_-TwV0a1oEeqcvaJ1A892dQ"/>
+    <element xmi:type="seff:ResourceDemandingSEFF" href="teastore.repository#_vHbbYDVgEeqPG_FgW3bi6Q"/>
+    <edges xmi:type="notation:Connector" xmi:id="_A_IW8K1pEeqcvaJ1A892dQ" type="4001" source="_-X_VkK1oEeqcvaJ1A892dQ" target="__RHV8K1oEeqcvaJ1A892dQ">
+      <styles xmi:type="notation:FontStyle" xmi:id="_A_IW8a1pEeqcvaJ1A892dQ" fontName=".AppleSystemUIFont"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A_IW8q1pEeqcvaJ1A892dQ" points="[7, 4, -248, -165]$[251, 150, -4, -19]"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A_JlEK1pEeqcvaJ1A892dQ" id="(0.4496124031007752,0.19)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_BRUTIK1pEeqcvaJ1A892dQ" type="4001" source="__RHV8K1oEeqcvaJ1A892dQ" target="_-X_Vla1oEeqcvaJ1A892dQ">
+      <styles xmi:type="notation:FontStyle" xmi:id="_BRUTIa1pEeqcvaJ1A892dQ" fontName=".AppleSystemUIFont"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BRUTIq1pEeqcvaJ1A892dQ" points="[43, 90, -92, -191]$[144, 290, 9, 9]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BRU6MK1pEeqcvaJ1A892dQ" id="(0.5581395348837209,0.1)"/>
     </edges>
   </notation:Diagram>
 </xmi:XMI>

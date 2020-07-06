@@ -28,8 +28,8 @@ import lombok.extern.java.Log;
 
 @Component
 @Log
-public class IterativeRuntimePipeline
-		extends AbstractIterativePipeline<PartitionedMonitoringData<IMonitoringRecord>, RuntimePipelineBlackboard>
+public class IterativeRuntimePipeline extends
+		AbstractIterativePipeline<PartitionedMonitoringData<? extends IMonitoringRecord>, RuntimePipelineBlackboard>
 		implements InitializingBean {
 	private static final boolean EVALUATION = true;
 
@@ -91,7 +91,8 @@ public class IterativeRuntimePipeline
 	}
 
 	@Override
-	protected void onIterationFinished(PartitionedMonitoringData<IMonitoringRecord> monitoring, HealthState success) {
+	protected void onIterationFinished(PartitionedMonitoringData<? extends IMonitoringRecord> monitoring,
+			HealthState success) {
 		if (monitoring == null) {
 			// we never started the recording - so do it now
 			blackboard.getQuery().trackStartPipelineExecution();
@@ -105,6 +106,7 @@ public class IterativeRuntimePipeline
 
 		// EVALUATION STUFF
 		if (EVALUATION && monitoring != null) {
+			log.info("Save data for evaluation.");
 			currentIteration++;
 
 			File evaluationBasePath = new File(EVALUATION_BASE_PATH);
@@ -155,7 +157,7 @@ public class IterativeRuntimePipeline
 		}
 	}
 
-	private void saveMonitoringData(List<IMonitoringRecord> monitoring, File file) {
+	private void saveMonitoringData(List<? extends IMonitoringRecord> monitoring, File file) {
 		if (!file.exists()) {
 			file.mkdirs();
 		}

@@ -97,7 +97,7 @@ public class MonitoringDataSet {
 					return assemblyCtx.get(0).getId();
 				}
 			} else {
-				log.warning("Failed to resolve mapped container. The previous transformations maybe failed.");
+				log.warning("Failed to resolve mapped container. The previous transformations failed maybe.");
 			}
 
 			return null;

@@ -18,6 +18,7 @@ import com.beust.jcommander.internal.Maps;
 
 import dmodel.base.core.facade.IPCMQueryFacade;
 import dmodel.base.shared.ModelUtil;
+import dmodel.designtime.monitoring.records.ResponseTimeRecord;
 import dmodel.designtime.monitoring.records.ServiceCallRecord;
 import dmodel.runtime.pipeline.pcm.repository.MonitoringDataSet;
 import dmodel.runtime.pipeline.pcm.repository.RepositoryStoexChanges;
@@ -85,6 +86,31 @@ public class ResourceDemandEstimatorAlternative implements IResourceDemandEstima
 				}
 			}
 		}
+		
+		/*
+		idMapping.entrySet().forEach(e -> {
+			List<ResponseTimeRecord> recs = data.getResponseTimes().getResponseTimes(e.getKey());
+			if (recs != null) {
+				recs.stream().forEach(r -> {
+					if (r.getInternalActionId().equals("_o_OcwLQBEeq7laWsYbb_3A")) {
+						TreeNode<ServiceCallRecord> current = e.getValue();
+						while (current != null && !current.data.getCallerServiceExecutionId().equals("<not set>")) {
+							if (current.parent == null) {
+								System.out.println(current.data.getServiceId());
+								System.out.println(current.data.getCallerServiceExecutionId());
+							}
+
+							current = current.parent;
+						}
+						if (current == null) {
+							System.out.println("Inconsistent tree!");
+						} else {
+							System.out.println("TEST" + current.data.getServiceId());
+						}
+					}
+				});
+			}
+		}); */
 
 		// timeline mapping
 		Map<Pair<String, String>, IResourceDemandTimeline> timelineMapping = new HashMap<>();
@@ -98,6 +124,7 @@ public class ResourceDemandEstimatorAlternative implements IResourceDemandEstima
 			ResourceContainer container = getContainerByAssemblyId(ctx);
 
 			Set<String> resourceIds = getDemandingResources(seff);
+
 			for (String resourceId : resourceIds) {
 				Pair<String, String> tempPair = Pair.of(container.getId(), resourceId);
 				if (!timelineMapping.containsKey(tempPair)) {
@@ -146,10 +173,14 @@ public class ResourceDemandEstimatorAlternative implements IResourceDemandEstima
 		if (demandingResourcesCache.containsKey(seff.getId())) {
 			return demandingResourcesCache.get(seff.getId());
 		} else {
-			Set<String> result = ModelUtil.getObjects(seff, ParametricResourceDemand.class).stream()
-					.filter(demand -> demand.getRequiredResource_ParametricResourceDemand() != null)
+			Set<String> result = ModelUtil
+					.getObjects(
+							seff.getBasicComponent_ServiceEffectSpecification().getRepository__RepositoryComponent(),
+							ParametricResourceDemand.class)
+					.stream().filter(demand -> demand.getRequiredResource_ParametricResourceDemand() != null)
 					.map(demand -> demand.getRequiredResource_ParametricResourceDemand().getId())
 					.collect(Collectors.toSet());
+
 			demandingResourcesCache.put(seff.getId(), result);
 			return result;
 		}

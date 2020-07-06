@@ -242,7 +242,10 @@ public class TimelineAnalyzer implements ITimelineAnalysis {
 				adjustmentFactor = adjustmentFactors.get(belongingServiceId);
 			}
 
-			ParametricLinearRegression regression = new ParametricLinearRegression(demandEntry.getValue(), 1, 0.5f,
+			// System.out.println("----" + demandEntry.getKey() + "-----");
+			// demandEntry.getValue().forEach(v -> System.out.println(v.getRight()));
+
+			ParametricLinearRegression regression = new ParametricLinearRegression(demandEntry.getValue(), 1, 0.3f,
 					adjustmentFactor + 1.0d);
 			PCMRandomVariable derived = regression.deriveStoex(null);
 			stoexMapping.put(demandEntry.getKey(), derived);

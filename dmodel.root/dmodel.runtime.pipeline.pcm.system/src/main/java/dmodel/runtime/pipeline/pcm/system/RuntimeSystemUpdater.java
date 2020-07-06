@@ -36,7 +36,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.extern.java.Log;
 
-// TODO update to fix multiple connect
 @Service
 @Log
 public class RuntimeSystemUpdater {
@@ -79,6 +78,21 @@ public class RuntimeSystemUpdater {
 
 		// get open required roles and delegate them
 		updateSystemRequiredRoles();
+	}
+
+	private String printTree(ServiceCallGraph scg) {
+		for (ServiceCallGraphNode node : scg.getNodes()) {
+			System.out.println(node.getSeff().getBasicComponent_ServiceEffectSpecification().getEntityName());
+			System.out.println(node.getHost().getEntityName());
+			System.out.println("--------");
+		}
+
+		for (ServiceCallGraphEdge edge : scg.getEdges()) {
+			System.out.println(edge.getFrom().getSeff().getBasicComponent_ServiceEffectSpecification().getEntityName()
+					+ " -> " + edge.getTo().getSeff().getBasicComponent_ServiceEffectSpecification().getEntityName());
+		}
+
+		return "Nodes: " + scg.getNodes().size() + "\n" + "Edges: " + scg.getEdges().size();
 	}
 
 	private void updateSystemRequiredRoles() {

@@ -22,8 +22,8 @@ public class DoubleMetricValidationPredicate implements ValidationPredicate {
 	@Override
 	public boolean satisfied(ValidationPoint validationPoint) {
 		for (ValidationMetricValue metric : validationPoint.getMetricValues()) {
-			if (metric.type() == metricType && metric.value() instanceof DoubleMetricValue) {
-				return compare(((DoubleMetricValue) metric.value()).getDoubleValue(), this.threshold, this.comparator);
+			if (metric.type() == metricType && metric instanceof DoubleMetricValue) {
+				return compare(((DoubleMetricValue) metric).getDoubleValue(), this.threshold, this.comparator);
 			}
 		}
 		return false;

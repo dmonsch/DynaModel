@@ -57,7 +57,6 @@ public class DBScanUsageSessionClusterer implements IUsageSessionClustering {
 
 		// 3. do dbscan clustering
 		log.info("Do clustering.");
-		System.out.println(points.size());
 		DBSCANClusterer<ServiceCallSessionClusterable> clusterer = new DBSCANClusterer<ServiceCallSessionClusterable>(
 				serviceCallIndexMapping.size() / 2, 0);
 		List<Cluster<ServiceCallSessionClusterable>> clusters = clusterer.cluster(points);
@@ -96,6 +95,11 @@ public class DBScanUsageSessionClusterer implements IUsageSessionClustering {
 		@Override
 		public double[] getPoint() {
 			return this.points;
+		}
+
+		@Override
+		public String toString() {
+			return Arrays.toString(points);
 		}
 	}
 

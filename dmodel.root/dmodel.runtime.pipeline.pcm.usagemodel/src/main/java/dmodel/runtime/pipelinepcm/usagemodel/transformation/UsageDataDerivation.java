@@ -4,8 +4,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.palladiosimulator.pcm.usagemodel.UsageScenario;
+import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import dmodel.base.core.config.ConfigurationContainer;
 import dmodel.base.core.facade.IPCMQueryFacade;
 import dmodel.base.shared.structure.Tree;
 import dmodel.designtime.monitoring.records.ServiceCallRecord;
@@ -16,11 +19,13 @@ import lombok.extern.java.Log;
 
 @Log
 @Service
-public class UsageDataDerivation {
+public class UsageDataDerivation implements InitializingBean {
 	private IUsageDataExtractor treeExtractor;
 
+	@Autowired
+	private ConfigurationContainer configuration;
+
 	public UsageDataDerivation() {
-		this.treeExtractor = new TreeBranchExtractor();
 	}
 
 	public List<UsageScenario> deriveUsageData(List<Tree<ServiceCallRecord>> callTrees, IPCMQueryFacade pcm,
@@ -35,6 +40,11 @@ public class UsageDataDerivation {
 
 		// 2. deduct
 		return data;
+	}
+
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		this.treeExtractor = new TreeBranchExtractor(configuration);
 	}
 
 }

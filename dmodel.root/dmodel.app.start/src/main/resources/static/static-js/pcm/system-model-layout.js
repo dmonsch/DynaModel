@@ -166,11 +166,11 @@ class HorizontalSystemModelLayouter {
 		for (var i = 0; i < composite.assemblys.length; i++) {
 			var current_assembly = composite.assemblys[i];
 			this.assemblys[composite.id][current_assembly.id] = current_assembly;
-			this.calibratePosition(current_assembly, curr_grid, this.igrid[composite.id]);
+			this.calibratePosition(current_assembly, curr_grid, this.igrid[composite.id], null);
 		}
 	}
 	
-	calibratePosition(ass, grid, igrid) {
+	calibratePosition(ass, grid, igrid, caller) {
 		// already calculated the position?
 		if (grid.hasOwnProperty(ass.id)) {
 			return grid[ass.id];
@@ -188,10 +188,12 @@ class HorizontalSystemModelLayouter {
 			var pmaxy = 0;
 			for (var i = 0; i < provs.length; i++) {
 				var out_ass = this.assemblyByProvidedRole(provs[i].role2);
-				var inner_pos = this.calibratePosition(out_ass, grid, igrid);
 				
-				psumx += (inner_pos[0] + 1);
-				pmaxy = Math.max(inner_pos[1], pmaxy);
+				if (out_ass.id !== caller) {
+					var inner_pos = this.calibratePosition(out_ass, grid, igrid, ass.id);
+					psumx += (inner_pos[0] + 1);
+					pmaxy = Math.max(inner_pos[1], pmaxy);
+				}
 			}
 			
 			// calculate the pos

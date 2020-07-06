@@ -51,9 +51,11 @@ public class ValidationData {
 							double valA = typedMetricA.getDoubleValue();
 							double valB = typedMetricB.getDoubleValue();
 
-							double improvement = 1d - ((1d / Math.max(valA, valB)) * Math.min(valA, valB));
-							sum += improvement * (typedMetricA.compare(typedMetricB) > 0 ? 1d : -1d);
-							correspondences++;
+							if (valA != 0.0d && valB != 0.0d) {
+								double improvement = 1d - ((1d / Math.max(valA, valB)) * Math.min(valA, valB));
+								sum += improvement * (typedMetricA.compare(typedMetricB) > 0 ? 1d : -1d);
+								correspondences++;
+							}
 						}
 					}
 				}

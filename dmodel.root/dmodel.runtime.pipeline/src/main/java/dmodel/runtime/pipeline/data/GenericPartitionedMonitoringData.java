@@ -20,7 +20,7 @@ public class GenericPartitionedMonitoringData extends PartitionedMonitoringData<
 		int splitIndex = (int) Math.ceil(records.size() * validationSplit);
 		int c = 0;
 		for (IMonitoringRecord record : copyShuffled) {
-			if (c < splitIndex) {
+			if (c++ < splitIndex) {
 				this.trainingData.add(record);
 			} else {
 				this.validationData.add(record);

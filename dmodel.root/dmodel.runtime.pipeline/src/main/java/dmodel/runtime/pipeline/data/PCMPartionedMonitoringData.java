@@ -1,6 +1,7 @@
 package dmodel.runtime.pipeline.data;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -11,6 +12,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 
+import dmodel.base.shared.structure.Tree.TreeNode;
 import dmodel.designtime.monitoring.records.PCMContextRecord;
 import dmodel.designtime.monitoring.records.ServiceCallRecord;
 import dmodel.designtime.monitoring.records.ServiceContextRecord;
@@ -25,7 +27,7 @@ public class PCMPartionedMonitoringData extends PartitionedMonitoringData<PCMCon
 	@Override
 	protected void prepareMonitoringData(List<PCMContextRecord> records, float validationSplit) {
 		// 1. map records to root execution IDs
-		final Map<String, List<String>> rootExecutionIdMapping = mapRootExecutionIds(records);
+		final Map<String, List<List<String>>> rootExecutionIdMapping = mapRootExecutionIds(records);
 
 		// 2. generate sets
 		Set<String> trainingContextIds = Sets.newHashSet();
@@ -40,33 +42,30 @@ public class PCMPartionedMonitoringData extends PartitionedMonitoringData<PCMCon
 
 	private void generateData(List<PCMContextRecord> records, Set<String> trainingContextIds,
 			Set<String> validationContextIds, float validationSplit) {
-		int otherSplit = (int) Math
-				.ceil((records.size() - (trainingContextIds.size() + validationContextIds.size())) * validationSplit);
-		int otherCounter = 0;
+		List<PCMContextRecord> shuffleCopy = Lists.newArrayList(records);
+		Collections.shuffle(shuffleCopy);
 
-		for (PCMContextRecord rec : records) {
+		for (PCMContextRecord rec : shuffleCopy) {
 			if (rec instanceof ServiceContextRecord) {
 				String contextId = ((ServiceContextRecord) rec).getServiceExecutionId();
+
 				if (trainingContextIds.contains(contextId)) {
 					this.trainingData.add(rec);
 				} else {
 					this.validationData.add(rec);
 				}
 			} else {
-				if (otherCounter++ > otherSplit) {
-					this.trainingData.add(rec);
-				} else {
-					this.validationData.add(rec);
-				}
+				this.trainingData.add(rec);
+				this.validationData.add(rec);
 			}
 		}
 	}
 
 	private void generateMonitoringSets(List<PCMContextRecord> records,
-			Map<String, List<String>> rootExecutionIdMapping, float validationSplit, Set<String> trainingContextIds,
-			Set<String> validationContextIds) {
+			Map<String, List<List<String>>> rootExecutionIdMapping, float validationSplit,
+			Set<String> trainingContextIds, Set<String> validationContextIds) {
 		rootExecutionIdMapping.keySet().forEach(key -> {
-			List<String> list = rootExecutionIdMapping.get(key);
+			List<List<String>> list = rootExecutionIdMapping.get(key);
 			int keySplit = (int) Math.ceil(list.size() * validationSplit);
 
 			// shuffle
@@ -75,32 +74,44 @@ public class PCMPartionedMonitoringData extends PartitionedMonitoringData<PCMCon
 
 			// iterate
 			int counter = 0;
-			for (String value : list) {
+			for (List<String> value : list) {
 				if (counter++ > keySplit) {
-					trainingContextIds.add(value);
+					trainingContextIds.addAll(value);
 				} else {
-					validationContextIds.add(value);
+					validationContextIds.addAll(value);
 				}
 			}
 		});
 	}
 
-	private Map<String, List<String>> mapRootExecutionIds(List<PCMContextRecord> records) {
-		final Map<String, List<String>> rootExecutionIdMapping = Maps.newHashMap();
+	private Map<String, List<List<String>>> mapRootExecutionIds(List<PCMContextRecord> records) {
+		final Map<String, List<List<String>>> rootExecutionIdMapping = Maps.newHashMap();
 
 		MonitoringDataUtil.buildServiceCallTree(records.stream().filter(f -> f instanceof ServiceCallRecord)
 				.map(ServiceCallRecord.class::cast).collect(Collectors.toList())).forEach(t -> {
+					List<String> resIds = Lists.newArrayList(collectSubIds(t.getRoot()));
 					String correspondingServiceId = t.getRoot().getData().getServiceId();
+
+					// put
 					if (rootExecutionIdMapping.containsKey(correspondingServiceId)) {
-						rootExecutionIdMapping.get(correspondingServiceId)
-								.add(t.getRoot().getData().getServiceExecutionId());
+						rootExecutionIdMapping.get(correspondingServiceId).add(resIds);
 					} else {
-						rootExecutionIdMapping.put(correspondingServiceId,
-								Lists.newArrayList(t.getRoot().getData().getServiceExecutionId()));
+						List<List<String>> res = new ArrayList<>();
+						res.add(resIds);
+						rootExecutionIdMapping.put(correspondingServiceId, res);
 					}
 				});
 
 		return rootExecutionIdMapping;
+	}
+
+	private Collection<? extends String> collectSubIds(TreeNode<ServiceCallRecord> root) {
+		List<String> res = Lists.newArrayList();
+		res.add(root.getData().getServiceExecutionId());
+		root.getChildren().forEach(n -> {
+			res.addAll(collectSubIds(n));
+		});
+		return res;
 	}
 
 }

@@ -58,7 +58,7 @@ public class ThreadMonitoringController {
 
 	private ThreadLocal<String> currentExternalCallId;
 	private ThreadLocal<Stack<ServiceCallTrack>> serviceCallStack;
-	private ThreadLocal<InternalOptional<String>> remoteStack;
+	private ThreadLocal<InternalOptional<Pair<String, String>>> remoteStack;
 	private ThreadLocal<Map<Pair<String, String>, Long>> startingTimesMap;
 	private ThreadLocal<String> currentSessionId;
 
@@ -85,10 +85,10 @@ public class ThreadMonitoringController {
 				return new Stack<ServiceCallTrack>();
 			}
 		});
-		this.remoteStack = ThreadLocal.withInitial(new Supplier<InternalOptional<String>>() {
+		this.remoteStack = ThreadLocal.withInitial(new Supplier<InternalOptional<Pair<String, String>>>() {
 			@Override
-			public InternalOptional<String> get() {
-				return new InternalOptional<String>();
+			public InternalOptional<Pair<String, String>> get() {
+				return new InternalOptional<Pair<String, String>>();
 			}
 		});
 		this.startingTimesMap = ThreadLocal.withInitial(new Supplier<Map<Pair<String, String>, Long>>() {
@@ -188,8 +188,8 @@ public class ThreadMonitoringController {
 
 	}
 
-	public synchronized void continueFromRemote(final String callerId) {
-		this.remoteStack.get().set(callerId);
+	public synchronized void continueFromRemote(final String callerId, final String externalCallId) {
+		this.remoteStack.get().set(Pair.of(callerId, externalCallId));
 	}
 
 	public synchronized void detachFromRemote() {
@@ -198,6 +198,10 @@ public class ThreadMonitoringController {
 
 	public void setExternalCallId(String callId) {
 		this.currentExternalCallId.set(callId);
+	}
+
+	public String getCurrentTraceId() {
+		return this.serviceCallStack.get().peek().serviceExecutionId;
 	}
 
 	/**
@@ -236,7 +240,8 @@ public class ThreadMonitoringController {
 			if (trace.empty()) {
 				if (remoteStack.get().isPresent()) {
 					nTrack = new ServiceCallTrack(serviceId, getSessionId(), serviceParameters,
-							String.valueOf(System.identityHashCode(exId)), remoteStack.get().value, externalCallId);
+							String.valueOf(System.identityHashCode(exId)), remoteStack.get().value.getLeft(),
+							remoteStack.get().value.getRight());
 				} else {
 					nTrack = new ServiceCallTrack(serviceId, getSessionId(), serviceParameters,
 							String.valueOf(System.identityHashCode(exId)), null, externalCallId);
@@ -249,6 +254,7 @@ public class ThreadMonitoringController {
 			// push it
 			trace.push(nTrack);
 
+			nTrack.cumulatedMonitoringOverhead += (System.nanoTime() - start);
 			analysis.exitServiceCallOverhead(serviceId, start);
 		}
 	}
@@ -278,7 +284,7 @@ public class ThreadMonitoringController {
 
 			if (!trace.isEmpty()) {
 				ServiceCallTrack parent = trace.peek();
-				parent.cumulatedMonitoringOverhead += track.cumulatedMonitoringOverhead;
+				parent.cumulatedMonitoringOverhead += track.cumulatedMonitoringOverhead + (System.nanoTime() - start);
 			}
 
 			// clear current external call

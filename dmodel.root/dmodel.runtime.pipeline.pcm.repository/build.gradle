@@ -13,9 +13,7 @@ dependencies {
 	implementation group: 'org.cache2k', name: 'cache2k-core', version: '1.2.4.Final'
 	
 	// https://mvnrepository.com/artifact/nz.ac.waikato.cms.weka/weka-stable
-	implementation(group: 'nz.ac.waikato.cms.weka', name: 'weka-stable', version: '3.8.4') {
-		exclude group: 'com.github.fommil.netlib'
-	}
+	implementation(group: 'nz.ac.waikato.cms.weka', name: 'weka-stable', version: '3.8.4')
 	
 	// Vitruv Reactions however need this dependency
 	implementation group: 'log4j', name: 'log4j', version: '1.2.17'

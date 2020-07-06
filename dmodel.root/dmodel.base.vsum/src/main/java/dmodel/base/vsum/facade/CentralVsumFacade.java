@@ -1,6 +1,7 @@
 package dmodel.base.vsum.facade;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 import org.eclipse.emf.ecore.EObject;
@@ -8,6 +9,8 @@ import org.palladiosimulator.pcm.resourceenvironment.ResourceContainer;
 import org.palladiosimulator.pcm.seff.ServiceEffectSpecification;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import com.google.common.collect.Maps;
 
 import dmodel.base.models.inmodel.InstrumentationMetamodel.ServiceInstrumentationPoint;
 import dmodel.base.models.runtimeenvironment.REModel.RuntimeResourceContainer;
@@ -24,6 +27,14 @@ public class CentralVsumFacade implements ISpecificVsumFacade {
 
 	@Autowired
 	private VsumMappingController mapping;
+
+	private Map<String, Optional<ResourceContainer>> runtimeContainerMappingCache;
+	private Map<ServiceEffectSpecification, Optional<ServiceInstrumentationPoint>> seffMappingCache;
+
+	public CentralVsumFacade() {
+		this.runtimeContainerMappingCache = Maps.newHashMap();
+		this.seffMappingCache = Maps.newHashMap();
+	}
 
 	@Override
 	public <T> Optional<T> resolveGenericCorrespondence(EObject obj, String tag, Class<T> type) {
@@ -59,12 +70,33 @@ public class CentralVsumFacade implements ISpecificVsumFacade {
 
 	@Override
 	public Optional<ResourceContainer> getCorrespondingResourceContainer(RuntimeResourceContainer rrc) {
-		return mapping.getCorrespondingElement(rrc, ResourceContainer.class);
+		if (runtimeContainerMappingCache.containsKey(rrc.getHostID())) {
+			return runtimeContainerMappingCache.get(rrc.getHostID());
+		} else {
+			Optional<ResourceContainer> result = mapping.getCorrespondingElement(rrc, ResourceContainer.class);
+			runtimeContainerMappingCache.put(rrc.getHostID(), result);
+			return result;
+		}
 	}
 
 	@Override
 	public Optional<ServiceInstrumentationPoint> getCorrespondingInstrumentationPoint(ServiceEffectSpecification seff) {
-		return mapping.getCorrespondingElement(seff, ServiceInstrumentationPoint.class);
+		if (seffMappingCache.containsKey(seff)) {
+			return seffMappingCache.get(seff);
+		} else {
+			Optional<ServiceInstrumentationPoint> result = mapping.getCorrespondingElement(seff,
+					ServiceInstrumentationPoint.class);
+			seffMappingCache.put(seff, result);
+			return result;
+		}
+	}
+
+	@Override
+	public void reset(boolean hard) {
+		if (hard) {
+			runtimeContainerMappingCache.clear();
+			seffMappingCache.clear();
+		}
 	}
 
 }

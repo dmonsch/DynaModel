@@ -31,6 +31,11 @@ public class InternalActionTimelineObject extends AbstractTimelineObject {
 	}
 
 	@Override
+	public boolean equals(Object o) {
+		return super.equals(o);
+	}
+
+	@Override
 	public String toString() {
 		return "IA [" + internalActionId + "] - (" + this.getStart() + ", " + this.getDuration() + ")";
 	}

@@ -58,7 +58,10 @@ public class RuntimeSystemTransformation extends AbstractIterativePipelinePart<R
 
 		log.info("Deriving system refinements at runtime.");
 		List<ServiceCallGraph> runtimeGraphs = buildGraphsFromMonitoringData(entryCalls);
+		log.info("Builded graphs.");
 		Pair<ServiceCallGraph, CallGraphMergeMetadata> mergeResult = mergeCallGraphs(runtimeGraphs);
+		log.info("Merged graphs.");
+
 		if (mergeResult != null && mergeResult.getLeft() != null) {
 			systemUpdater.applyCallGraph(mergeResult);
 		}
@@ -81,7 +84,7 @@ public class RuntimeSystemTransformation extends AbstractIterativePipelinePart<R
 		// merge graphs
 		ServiceCallGraph currentCallGraph = ServiceCallGraphFactory.eINSTANCE.createServiceCallGraph();
 		for (ServiceCallGraph scg : callGraphs) {
-			scg.rebuild();
+			// scg.rebuild();
 			updateEntryCallPriorities(scg, metadata);
 			mergeCallGraphs(currentCallGraph, scg, metadata);
 		}
@@ -102,7 +105,10 @@ public class RuntimeSystemTransformation extends AbstractIterativePipelinePart<R
 		for (ServiceCallGraphNode node : scg.getNodes()) {
 			if (scg.getIncomingEdges().get(node).size() == 0) {
 				// => entry point
-				metadata.entryNodePriorities.remove(node);
+				metadata.entryNodePriorities = metadata.entryNodePriorities.stream().filter(f -> {
+					return !(f.getHost().getId().equals(node.getHost().getId())
+							&& f.getSeff().getId().equals(node.getSeff().getId()));
+				}).collect(Collectors.toCollection(LinkedList::new));
 				metadata.entryNodePriorities.addFirst(node);
 			}
 		}

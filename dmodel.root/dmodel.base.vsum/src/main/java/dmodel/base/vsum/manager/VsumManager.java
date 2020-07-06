@@ -379,7 +379,7 @@ public class VsumManager extends AbstractHealthStateComponent {
 			fileExtensionPathMapping.put(fileExtension, Lists.newArrayList(model));
 		}
 
-		// write the system to the file
+		// write the model to the file
 		ModelUtil.saveToFile(model, temp);
 
 		// persist
