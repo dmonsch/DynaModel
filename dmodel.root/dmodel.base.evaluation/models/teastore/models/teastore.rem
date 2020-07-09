@@ -1,3 +1,4 @@
 <?xml version="1.0" encoding="ASCII"?>
 <rem:RuntimeEnvironmentModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:rem="http://www.dmodel.com/RuntimeEnvironmentModel" id="_YbfaEIF_Eeq5X9KEEqof3g">
+  <containers hostname="VirtualizedTeastoreContainer" hostID="f1039ae1e5c650f0228043ad4158babf"/>
 </rem:RuntimeEnvironmentModel>

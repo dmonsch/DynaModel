@@ -10,6 +10,7 @@ import org.palladiosimulator.pcm.seff.ResourceDemandingSEFF;
 
 import de.uka.ipd.sdq.identifier.Identifier;
 import dmodel.base.core.facade.IResettableQueryFacade;
+import dmodel.base.models.callgraph.ServiceCallGraph.ServiceCallGraph;
 
 /**
  * Facade for accessing the elements in the repository model. Should provide
@@ -30,6 +31,15 @@ public interface IRepositoryQueryFacade extends IResettableQueryFacade {
 	 * @return the element with the given ID and type or null if it does not exist
 	 */
 	public <T extends Identifier> T getElementById(String id, Class<T> type);
+
+	/**
+	 * Higher order function which builds a service call graph out of a repository
+	 * as a whole.
+	 * 
+	 * @return {@link ServiceCallGraph} which describes the "calls" relationship
+	 *         between services
+	 */
+	public ServiceCallGraph getServiceCallGraph();
 
 	/**
 	 * Gets all components that provide a specific interface.

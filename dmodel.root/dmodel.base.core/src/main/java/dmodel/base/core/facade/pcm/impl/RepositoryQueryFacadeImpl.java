@@ -6,6 +6,9 @@ import org.cache2k.Cache;
 import org.cache2k.Cache2kBuilder;
 import org.palladiosimulator.pcm.repository.OperationInterface;
 import org.palladiosimulator.pcm.repository.RepositoryComponent;
+import org.palladiosimulator.pcm.seff.ExternalCallAction;
+import org.palladiosimulator.pcm.seff.ResourceDemandingSEFF;
+import org.pcm.headless.api.util.ModelUtil;
 import org.pcm.headless.api.util.PCMUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -13,6 +16,8 @@ import org.springframework.stereotype.Component;
 import de.uka.ipd.sdq.identifier.Identifier;
 import dmodel.base.core.IPcmModelProvider;
 import dmodel.base.core.facade.pcm.IRepositoryQueryFacade;
+import dmodel.base.models.callgraph.ServiceCallGraph.ServiceCallGraph;
+import dmodel.base.models.callgraph.ServiceCallGraph.ServiceCallGraphFactory;
 import dmodel.base.shared.pcm.util.repository.PCMRepositoryUtil;
 
 /**
@@ -72,6 +77,37 @@ public class RepositoryQueryFacadeImpl implements IRepositoryQueryFacade {
 	@Override
 	public List<RepositoryComponent> getComponentsProvidingInterface(OperationInterface iface) {
 		return PCMRepositoryUtil.getComponentsProvidingInterface(pcmModelProvider.getRepository(), iface);
+	}
+
+	@Override
+	public ServiceCallGraph getServiceCallGraph() {
+		List<ResourceDemandingSEFF> seffs = ModelUtil.getObjects(pcmModelProvider.getRepository(),
+				ResourceDemandingSEFF.class);
+		ServiceCallGraph output = ServiceCallGraphFactory.eINSTANCE.createServiceCallGraph();
+
+		seffs.forEach(seff -> {
+			output.addNode(seff, null);
+		});
+
+		seffs.forEach(seff -> {
+			List<ExternalCallAction> externalCalls = ModelUtil.getObjects(seff, ExternalCallAction.class);
+			externalCalls.forEach(ext -> {
+				OperationInterface iface = ext.getCalledService_ExternalService().getInterface__OperationSignature();
+				getComponentsProvidingInterface(iface).forEach(c -> {
+					ResourceDemandingSEFF correspondingSeff = ModelUtil.getObjects(c, ResourceDemandingSEFF.class)
+							.stream().filter(iseff -> {
+								return iseff.getDescribedService__SEFF().getId()
+										.equals(ext.getCalledService_ExternalService().getId());
+							}).findFirst().orElse(null);
+
+					if (correspondingSeff != null) {
+						output.incrementEdge(seff, correspondingSeff, null, null, ext);
+					}
+				});
+			});
+		});
+
+		return output;
 	}
 
 }

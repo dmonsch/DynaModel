@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ASCII"?>
 <allocation:Allocation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:allocation="http://palladiosimulator.org/PalladioComponentModel/Allocation/5.2" id="_-lK2wDWXEeqEyfgnV4BB-w">
   <targetResourceEnvironment_Allocation href="teastore.resourceenvironment#/"/>
   <system_Allocation href="teastore.system#_qGRmIDWWEeqEyfgnV4BB-w"/>
@@ -22,8 +22,8 @@
     <resourceContainer_AllocationContext href="teastore.resourceenvironment#_4PZAcDWXEeqEyfgnV4BB-w"/>
     <assemblyContext_AllocationContext href="teastore.system#_H5R74DWXEeqEyfgnV4BB-w"/>
   </allocationContexts_Allocation>
-  <allocationContexts_Allocation id="_HbYpgDWYEeqEyfgnV4BB-w" entityName="Allocation_Assembly_DummyRecommender &lt;DummyRecommender> &lt;DummyRecommender>">
+  <allocationContexts_Allocation id="_JrFLAL-fEeqbMKXB29wVlA" entityName="Assembly-SlopeOneRecommender-1594050085 -> VirtualizedTeastoreContainer">
     <resourceContainer_AllocationContext href="teastore.resourceenvironment#_4PZAcDWXEeqEyfgnV4BB-w"/>
-    <assemblyContext_AllocationContext href="teastore.system#_Kw0JsDWXEeqEyfgnV4BB-w"/>
+    <assemblyContext_AllocationContext href="teastore.system#_JrD84L-fEeqbMKXB29wVlA"/>
   </allocationContexts_Allocation>
 </allocation:Allocation>

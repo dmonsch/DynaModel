@@ -186,7 +186,7 @@ public class ServiceCallGraphImpl extends MinimalEObjectImpl.Container implement
 		getNodes().add(node);
 		getIncomingEdges().put(node, new BasicEList<ServiceCallGraphEdge>());
 		getOutgoingEdges().put(node, new BasicEList<ServiceCallGraphEdge>());
-		nodeMapping.put(Pair.of(seff.getId(), host.getId()), node);
+		nodeMapping.put(Pair.of(seff.getId(), host == null ? null : host.getId()), node);
 
 		return node;
 	}
@@ -228,8 +228,8 @@ public class ServiceCallGraphImpl extends MinimalEObjectImpl.Container implement
 
 		// add globally
 		getEdges().add(edge);
-		edgeMapping.put(new Quintuple<>(from.getId(), to.getId(), fromContainer.getId(), toContainer.getId(),
-				externalCall.getId()), edge);
+		edgeMapping.put(new Quintuple<>(from.getId(), to.getId(), fromContainer == null ? null : fromContainer.getId(),
+				toContainer == null ? null : toContainer.getId(), externalCall.getId()), edge);
 	}
 
 	/**
@@ -259,8 +259,9 @@ public class ServiceCallGraphImpl extends MinimalEObjectImpl.Container implement
 			final ResourceContainer fromContainer, final ResourceContainer toContainer,
 			final ExternalCallAction externalCall) {
 
-		return edgeMapping.get(new Quintuple<>(from.getId(), to.getId(), fromContainer.getId(), toContainer.getId(),
-				externalCall.getId()));
+		return edgeMapping
+				.get(new Quintuple<>(from.getId(), to.getId(), fromContainer == null ? null : fromContainer.getId(),
+						toContainer == null ? null : toContainer.getId(), externalCall.getId()));
 	}
 
 	/**
@@ -270,7 +271,7 @@ public class ServiceCallGraphImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	public ServiceCallGraphNode hasNode(final ResourceDemandingSEFF node, final ResourceContainer host) {
-		return nodeMapping.get(Pair.of(node.getId(), host.getId()));
+		return nodeMapping.get(Pair.of(node.getId(), host == null ? null : host.getId()));
 	}
 
 	/**

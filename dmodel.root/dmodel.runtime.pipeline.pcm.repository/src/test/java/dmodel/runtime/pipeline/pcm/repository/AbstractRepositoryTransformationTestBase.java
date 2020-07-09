@@ -4,6 +4,7 @@ import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
 
 import dmodel.runtime.pipeline.BasePipelineTestConfiguration;
+import dmodel.runtime.pipeline.pcm.repository.adjustment.impl.TreeScalingRepositoryDerivationAdjuster;
 
 public class AbstractRepositoryTransformationTestBase {
 
@@ -14,6 +15,11 @@ public class AbstractRepositoryTransformationTestBase {
 		@Bean
 		public RepositoryDerivation transformation() {
 			return new RepositoryDerivation();
+		}
+
+		@Bean
+		public TreeScalingRepositoryDerivationAdjuster adjuster() {
+			return new TreeScalingRepositoryDerivationAdjuster();
 		}
 
 	}

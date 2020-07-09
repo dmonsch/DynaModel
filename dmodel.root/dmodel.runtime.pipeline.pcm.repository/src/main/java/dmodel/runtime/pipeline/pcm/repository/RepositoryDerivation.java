@@ -1,31 +1,31 @@
 package dmodel.runtime.pipeline.pcm.repository;
 
-import java.util.Map;
 import java.util.Set;
 import java.util.logging.Level;
+import java.util.stream.Collectors;
 
-import org.apache.commons.math3.stat.StatUtils;
-import org.pcm.headless.shared.data.results.MeasuringPointType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.google.common.collect.Maps;
 
 import dmodel.base.core.facade.IPCMQueryFacade;
 import dmodel.base.core.facade.IRuntimeEnvironmentQueryFacade;
 import dmodel.base.vsum.facade.ISpecificVsumFacade;
 import dmodel.designtime.monitoring.records.PCMContextRecord;
+import dmodel.designtime.monitoring.records.ServiceCallRecord;
 import dmodel.runtime.pipeline.data.PartitionedMonitoringData;
+import dmodel.runtime.pipeline.pcm.repository.adjustment.IRepositoryDerivationAdjustment;
 import dmodel.runtime.pipeline.pcm.repository.branch.impl.BranchEstimationImpl;
 import dmodel.runtime.pipeline.pcm.repository.core.ResourceDemandEstimatorAlternative;
 import dmodel.runtime.pipeline.pcm.repository.loop.impl.LoopEstimationImpl;
 import dmodel.runtime.pipeline.pcm.repository.model.IResourceDemandEstimator;
 import dmodel.runtime.pipeline.validation.data.ValidationData;
-import dmodel.runtime.pipeline.validation.data.ValidationMetricValue;
-import dmodel.runtime.pipeline.validation.data.metric.ValidationMetricType;
-import dmodel.runtime.pipeline.validation.data.metric.value.DoubleMetricValue;
 import lombok.extern.java.Log;
 
+/**
+ * 
+ * @author David Monschein
+ *
+ */
 @Service
 @Log
 public class RepositoryDerivation {
@@ -35,17 +35,11 @@ public class RepositoryDerivation {
 	@Autowired
 	private IRuntimeEnvironmentQueryFacade remQuery;
 
-	private static final double ADJUSTMENT_FACTOR = 0.1d;
-	private static final double ADDITIVE_INCREASE = 0.02d;
-	private static final double MULTIPLE_DECREASE = 0.5d;
-
-	private static final double THRES_REL_DIST = 0.15d;
+	@Autowired
+	private IRepositoryDerivationAdjustment adjuster;
 
 	private final LoopEstimationImpl loopEstimation;
 	private final BranchEstimationImpl branchEstimation;
-
-	private Map<String, Double> currentValidationAdjustment = Maps.newHashMap();
-	private Map<String, Double> currentValidationAdjustmentGradient = Maps.newHashMap();
 
 	public RepositoryDerivation() {
 		this.loopEstimation = new LoopEstimationImpl();
@@ -55,18 +49,19 @@ public class RepositoryDerivation {
 	public RepositoryStoexChanges calibrateRepository(PartitionedMonitoringData<PCMContextRecord> data,
 			IPCMQueryFacade pcm, ValidationData validation, Set<String> toPrepare) {
 		try {
-			prepareAdjustment(validation, toPrepare);
+			Set<String> presentServices = data.getAllData().stream().filter(f -> f instanceof ServiceCallRecord)
+					.map(ServiceCallRecord.class::cast).map(s -> s.getServiceId()).collect(Collectors.toSet());
+
+			adjuster.prepareAdjustments(pcm, validation, toPrepare, presentServices);
 
 			MonitoringDataSet monitoringDataSet = new MonitoringDataSet(data.getTrainingData(), mappingFacade, remQuery,
 					pcm.getAllocation(), pcm.getRepository());
 
 			// TODO integrate loop and branch estimation
 
-			System.out.println(currentValidationAdjustment);
-			System.out.println(currentValidationAdjustmentGradient);
 			IResourceDemandEstimator estimation = new ResourceDemandEstimatorAlternative(pcm);
 			estimation.prepare(monitoringDataSet);
-			RepositoryStoexChanges result = estimation.derive(currentValidationAdjustment);
+			RepositoryStoexChanges result = estimation.derive(adjuster.getAdjustments());
 
 			log.info("Finished calibration of internal actions.");
 			log.info("Finished repository calibration.");
@@ -79,64 +74,6 @@ public class RepositoryDerivation {
 			return null;
 		}
 
-	}
-
-	private void prepareAdjustment(ValidationData validation, Set<String> fineGrainedInstrumentedServices) {
-		if (validation == null || validation.isEmpty()) {
-			return;
-		}
-
-		validation.getValidationPoints().forEach(point -> {
-			MeasuringPointType type = point.getMeasuringPoint().getType();
-			if (type == MeasuringPointType.ASSEMBLY_OPERATION || type == MeasuringPointType.ENTRY_LEVEL_CALL) {
-				if (point.getServiceId() != null && point.getMonitoringDistribution() != null) {
-					DoubleMetricValue valueRelDist = null;
-					// absolute dist
-					double valueAbsDist = StatUtils.mean(point.getMonitoringDistribution().yAxis())
-							- StatUtils.mean(point.getAnalysisDistribution().yAxis());
-
-					// check the metric
-					for (ValidationMetricValue metric : point.getMetricValues()) {
-						if (metric.type() == ValidationMetricType.AVG_DISTANCE_REL) {
-							valueRelDist = ((DoubleMetricValue) metric);
-						}
-					}
-
-					if (valueRelDist != null) {
-						double relDist = (double) valueRelDist.value();
-
-						if (relDist >= THRES_REL_DIST
-								&& fineGrainedInstrumentedServices.contains(point.getServiceId())) {
-							if (valueAbsDist > 0) {
-								adjustService(point.getServiceId(), true);
-							} else if (valueAbsDist < 0) {
-								adjustService(point.getServiceId(), false);
-							}
-						}
-					}
-				}
-			}
-		});
-	}
-
-	private void adjustService(String service, boolean scaleUp) {
-		if (!currentValidationAdjustment.containsKey(service)) {
-			currentValidationAdjustment.put(service, ADJUSTMENT_FACTOR * (scaleUp ? 1 : -1));
-			currentValidationAdjustmentGradient.put(service, ADJUSTMENT_FACTOR);
-		} else {
-			double adjustmentBefore = currentValidationAdjustment.get(service);
-			double currentGradient = currentValidationAdjustmentGradient.get(service);
-
-			double adjustmentNow;
-			if (scaleUp && adjustmentBefore < 0 || !scaleUp && adjustmentBefore > 0) {
-				adjustmentNow = currentGradient * MULTIPLE_DECREASE * -1;
-			} else {
-				adjustmentNow = currentGradient + ADDITIVE_INCREASE * Math.signum(currentGradient);
-			}
-
-			currentValidationAdjustment.put(service, adjustmentNow + adjustmentBefore);
-			currentValidationAdjustmentGradient.put(service, adjustmentNow);
-		}
 	}
 
 }

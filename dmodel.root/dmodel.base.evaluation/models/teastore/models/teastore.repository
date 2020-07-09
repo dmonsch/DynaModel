@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ASCII"?>
 <repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" xmlns:stoex="http://sdq.ipd.uka.de/StochasticExpressions/2.2" id="_VdKBIDVWEeqPG_FgW3bi6Q">
   <components__Repository xsi:type="repository:BasicComponent" id="_bC13QDVWEeqPG_FgW3bi6Q" entityName="WebUI">
     <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_xlERkDVXEeqPG_FgW3bi6Q" entityName="Provided_CartActions_WebUI" providedInterface__OperationProvidedRole="_g6IlUDVXEeqPG_FgW3bi6Q"/>
@@ -80,7 +80,7 @@
       <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_3PQJADVeEeqPG_FgW3bi6Q" predecessor_AbstractAction="_jGakwDVZEeqPG_FgW3bi6Q" successor_AbstractAction="_rez1YLVFEeqTFs1I1gP2AQ" calledService_ExternalService="_XZ23ADVZEeqPG_FgW3bi6Q" role_ExternalService="_YmykMDVZEeqPG_FgW3bi6Q"/>
       <steps_Behaviour xsi:type="seff:InternalAction" id="_rez1YLVFEeqTFs1I1gP2AQ" entityName="REST" predecessor_AbstractAction="_3PQJADVeEeqPG_FgW3bi6Q" successor_AbstractAction="_jGakwTVZEeqPG_FgW3bi6Q">
         <resourceDemand_Action>
-          <specification_ParametericResourceDemand specification="1"/>
+          <specification_ParametericResourceDemand specification="DoublePMF[(0.0;0.0952380952)(0.1;0.1428571429)(0.2;0.1666666667)(0.3;0.0476190476)(0.4;0.1428571429)(0.5;0.0476190476)(0.6;0.0714285714)(0.8;0.0714285714)(1.0;0.1666666667)(1.1;0.0238095238)(10.1;0.0238095238)]"/>
           <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
         </resourceDemand_Action>
       </steps_Behaviour>
@@ -91,7 +91,7 @@
       <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_8TRcgDVeEeqPG_FgW3bi6Q" predecessor_AbstractAction="_5uoVgDVeEeqPG_FgW3bi6Q" successor_AbstractAction="_bbWZ0LU6Eeq29rcBS3Ut9g" calledService_ExternalService="_NiisQDVcEeqPG_FgW3bi6Q" role_ExternalService="_RgKYYDVcEeqPG_FgW3bi6Q"/>
       <steps_Behaviour xsi:type="seff:InternalAction" id="_bbWZ0LU6Eeq29rcBS3Ut9g" entityName="REST" predecessor_AbstractAction="_8TRcgDVeEeqPG_FgW3bi6Q" successor_AbstractAction="_5uo8kDVeEeqPG_FgW3bi6Q">
         <resourceDemand_Action>
-          <specification_ParametericResourceDemand specification="1"/>
+          <specification_ParametericResourceDemand specification="DoublePMF[(0.0;0.5087040619)(0.1;0.418762089)(0.2;0.0328820116)(0.3;0.0106382979)(0.4;0.0125725338)(0.5;0.0058027079)(0.7;0.001934236)(0.8;0.001934236)(0.9;9.67118E-4)(1.1;9.67118E-4)(1.3;0.001934236)(13.8;9.67118E-4)(30.2;9.67118E-4)(64.9;9.67118E-4)]"/>
           <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
         </resourceDemand_Action>
       </steps_Behaviour>
@@ -114,13 +114,13 @@
       </steps_Behaviour>
       <steps_Behaviour xsi:type="seff:InternalAction" id="_lTsV0LRnEeqBG67dKda_bQ" entityName="buffer" predecessor_AbstractAction="__EMrkLTMEeqYI7n2jTg1Ag" successor_AbstractAction="_OFh10TViEeqPG_FgW3bi6Q">
         <resourceDemand_Action>
-          <specification_ParametericResourceDemand specification="1&#xA;"/>
+          <specification_ParametericResourceDemand specification="DoublePMF[(0.0;0.0454545455)(0.1;0.0909090909)(0.2;0.0454545455)(0.3;0.0909090909)(0.4;0.0454545455)(0.5;0.0454545455)(0.6;0.1363636364)(0.7;0.0454545455)(0.9;0.0454545455)(1.2;0.4090909091)]"/>
           <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
         </resourceDemand_Action>
       </steps_Behaviour>
       <steps_Behaviour xsi:type="seff:InternalAction" id="__EMrkLTMEeqYI7n2jTg1Ag" entityName="REST" predecessor_AbstractAction="_P7sGMDViEeqPG_FgW3bi6Q" successor_AbstractAction="_lTsV0LRnEeqBG67dKda_bQ">
         <resourceDemand_Action>
-          <specification_ParametericResourceDemand specification="1&#xA;"/>
+          <specification_ParametericResourceDemand specification="DoublePMF[(0.0;0.0158730159)(0.1;0.0388007055)(0.2;0.049382716)(0.3;0.0582010582)(0.4;0.0546737213)(0.5;0.0476190476)(0.6;0.0758377425)(0.7;0.0405643739)(0.8;0.0194003527)(0.9;0.012345679)(1.0;0.0070546737)(1.1;0.0088183422)(1.2;0.4250440917)(1.3;0.0052910053)(1.5;0.0035273369)(1.6;0.0017636684)(1.7;0.0052910053)(1.8;0.0035273369)(1.9;0.0052910053)(2.0;0.0017636684)(2.2;0.0052910053)(2.4;0.0511463845)(2.5;0.0070546737)(2.6;0.0017636684)(3.1;0.0035273369)(3.2;0.0017636684)(3.6;0.0035273369)(3.7;0.012345679)(4.3;0.0017636684)(4.8;0.0035273369)(4.9;0.0052910053)(5.8;0.0017636684)(6.1;0.0035273369)(6.6;0.0017636684)(7.0;0.0017636684)(9.2;0.0017636684)(12.0;0.0017636684)(14.3;0.0017636684)(26.2;0.0017636684)(39.6;0.0017636684)(912.0;0.0017636684)(2038.6;0.0017636684)(4464.8;0.0017636684)]"/>
           <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
         </resourceDemand_Action>
       </steps_Behaviour>
@@ -151,7 +151,7 @@
       <steps_Behaviour xsi:type="seff:StopAction" id="_Q7KGgTVfEeqPG_FgW3bi6Q" entityName="stop" predecessor_AbstractAction="_lYNwgDbTEeq5L_FI-wfNWQ"/>
       <steps_Behaviour xsi:type="seff:InternalAction" id="_lYNwgDbTEeq5L_FI-wfNWQ" entityName="persist" predecessor_AbstractAction="_Q7KGgDVfEeqPG_FgW3bi6Q" successor_AbstractAction="_Q7KGgTVfEeqPG_FgW3bi6Q">
         <resourceDemand_Action>
-          <specification_ParametericResourceDemand specification="1"/>
+          <specification_ParametericResourceDemand specification="DoublePMF[(0.2;0.0333333333)(0.4;0.0166666667)(0.5;0.0166666667)(0.6;0.0333333333)(0.7;0.0166666667)(0.8;0.05)(0.9;0.0166666667)(1.0;0.0166666667)(1.1;0.05)(1.2;0.0333333333)(1.3;0.0166666667)(1.4;0.0166666667)(1.5;0.0333333333)(1.7;0.0333333333)(1.9;0.05)(2.0;0.05)(2.1;0.0166666667)(2.3;0.0166666667)(2.4;0.0166666667)(2.6;0.0166666667)(2.8;0.0166666667)(2.9;0.0333333333)(3.0;0.0166666667)(3.2;0.0166666667)(3.3;0.0166666667)(4.0;0.0166666667)(4.3;0.0166666667)(4.4;0.0166666667)(5.2;0.0166666667)(5.4;0.0333333333)(5.7;0.0166666667)(5.8;0.0166666667)(6.5;0.0166666667)(8.6;0.0166666667)(9.4;0.0166666667)(11.1;0.0166666667)(12.0;0.0166666667)(13.1;0.0166666667)(16.4;0.0166666667)(16.6;0.0166666667)(17.7;0.0166666667)(25.5;0.0166666667)(28.0;0.0166666667)(34.1;0.0166666667)(188.8;0.0166666667)]"/>
           <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
         </resourceDemand_Action>
       </steps_Behaviour>
@@ -161,7 +161,7 @@
       <steps_Behaviour xsi:type="seff:StopAction" id="_Q7KtkjVfEeqPG_FgW3bi6Q" entityName="stop" predecessor_AbstractAction="_tBq1MDbTEeq5L_FI-wfNWQ"/>
       <steps_Behaviour xsi:type="seff:InternalAction" id="_tBq1MDbTEeq5L_FI-wfNWQ" entityName="persist" predecessor_AbstractAction="_Q7KtkTVfEeqPG_FgW3bi6Q" successor_AbstractAction="_Q7KtkjVfEeqPG_FgW3bi6Q">
         <resourceDemand_Action>
-          <specification_ParametericResourceDemand specification="1"/>
+          <specification_ParametericResourceDemand specification="DoublePMF[(0.0;0.0587774295)(0.1;0.1857366771)(0.2;0.2131661442)(0.3;0.171630094)(0.4;0.1120689655)(0.5;0.0869905956)(0.6;0.0650470219)(0.7;0.025862069)(0.8;0.0203761755)(0.9;0.0109717868)(1.0;0.0078369906)(1.1;0.0078369906)(1.2;0.0047021944)(1.3;0.0023510972)(1.4;7.836991E-4)(1.5;0.0023510972)(1.6;0.0031347962)(1.7;0.0031347962)(1.8;0.0031347962)(1.9;7.836991E-4)(2.0;0.0031347962)(2.4;7.836991E-4)(2.6;7.836991E-4)(2.7;7.836991E-4)(2.9;0.0015673981)(3.2;7.836991E-4)(3.3;7.836991E-4)(5.7;7.836991E-4)(6.2;7.836991E-4)(9.1;7.836991E-4)(9.9;7.836991E-4)(20.4;7.836991E-4)(44.8;7.836991E-4)]"/>
           <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
         </resourceDemand_Action>
       </steps_Behaviour>
@@ -201,7 +201,7 @@
       </steps_Behaviour>
       <steps_Behaviour xsi:type="seff:InternalAction" id="_Gq_WcK19EeqcvaJ1A892dQ" entityName="getOrders" predecessor_AbstractAction="_RHWfYDbTEeq5L_FI-wfNWQ" successor_AbstractAction="_SffXADbTEeq5L_FI-wfNWQ">
         <resourceDemand_Action>
-          <specification_ParametericResourceDemand specification="5"/>
+          <specification_ParametericResourceDemand specification="DoublePMF[(694.4;0.04)(735.6;0.04)(861.5;0.04)(1007.7;0.04)(1044.5;0.04)(1044.7;0.04)(1073.7;0.04)(1082.9;0.04)(1085.8;0.04)(1088.0;0.04)(1110.6;0.04)(1113.1;0.04)(1130.8;0.04)(1132.9;0.04)(1136.3;0.04)(1178.1;0.04)(1227.4;0.04)(1230.6;0.04)(1231.7;0.04)(1262.4;0.04)(1320.3;0.04)(1368.4;0.04)(1468.9;0.04)(1493.1;0.04)(2249.9;0.04)]"/>
           <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
         </resourceDemand_Action>
       </steps_Behaviour>
@@ -215,13 +215,13 @@
       <steps_Behaviour xsi:type="seff:StopAction" id="_Cet9ATVdEeqPG_FgW3bi6Q" entityName="stop" predecessor_AbstractAction="_F5_KADVdEeqPG_FgW3bi6Q"/>
       <steps_Behaviour xsi:type="seff:InternalAction" id="_EanpADVdEeqPG_FgW3bi6Q" entityName="prepareOrder" predecessor_AbstractAction="_Cet9ADVdEeqPG_FgW3bi6Q" successor_AbstractAction="_N_TEQDVdEeqPG_FgW3bi6Q">
         <resourceDemand_Action>
-          <specification_ParametericResourceDemand specification="1"/>
+          <specification_ParametericResourceDemand specification="1.0"/>
           <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
         </resourceDemand_Action>
       </steps_Behaviour>
       <steps_Behaviour xsi:type="seff:InternalAction" id="_F5_KADVdEeqPG_FgW3bi6Q" entityName="finalizeOrder" predecessor_AbstractAction="_P_ZTwDVdEeqPG_FgW3bi6Q" successor_AbstractAction="_Cet9ATVdEeqPG_FgW3bi6Q">
         <resourceDemand_Action>
-          <specification_ParametericResourceDemand specification="1&#xA;"/>
+          <specification_ParametericResourceDemand specification="DoublePMF[(0.0;0.1052631579)(0.1;0.2631578947)(0.2;0.2105263158)(0.3;0.1578947368)(0.4;0.0526315789)(0.6;0.1052631579)(0.9;0.0526315789)(1.0;0.0526315789)]"/>
           <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
         </resourceDemand_Action>
       </steps_Behaviour>
@@ -253,7 +253,7 @@
       <steps_Behaviour xsi:type="seff:StopAction" id="_lSA1cTVgEeqPG_FgW3bi6Q" entityName="stop" predecessor_AbstractAction="_o_OcwLQBEeq7laWsYbb_3A"/>
       <steps_Behaviour xsi:type="seff:InternalAction" id="_o_OcwLQBEeq7laWsYbb_3A" entityName="train" predecessor_AbstractAction="_lSA1cDVgEeqPG_FgW3bi6Q" successor_AbstractAction="_lSA1cTVgEeqPG_FgW3bi6Q">
         <resourceDemand_Action>
-          <specification_ParametericResourceDemand specification="10"/>
+          <specification_ParametericResourceDemand specification="DoublePMF[(686.8;0.04)(789.3;0.04)(1168.9;0.04)(1213.5;0.04)(1222.8;0.04)(1228.9;0.04)(1242.8;0.04)(1265.9;0.04)(1267.4;0.04)(1282.8;0.04)(1289.0;0.04)(1298.2;0.04)(1302.8;0.04)(1362.9;0.04)(1386.0;0.04)(1424.5;0.04)(1449.1;0.04)(1504.4;0.04)(1543.1;0.04)(1552.3;0.04)(1583.1;0.04)(1595.4;0.04)(1674.0;0.04)(1852.6;0.04)(2146.8;0.04)]"/>
           <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
         </resourceDemand_Action>
       </steps_Behaviour>
@@ -263,7 +263,7 @@
       <steps_Behaviour xsi:type="seff:StopAction" id="_lSBcgTVgEeqPG_FgW3bi6Q" entityName="stop" predecessor_AbstractAction="_I-vuUK1oEeqcvaJ1A892dQ"/>
       <steps_Behaviour xsi:type="seff:InternalAction" id="_I-vuUK1oEeqcvaJ1A892dQ" entityName="recommend" predecessor_AbstractAction="_lSBcgDVgEeqPG_FgW3bi6Q" successor_AbstractAction="_lSBcgTVgEeqPG_FgW3bi6Q">
         <resourceDemand_Action>
-          <specification_ParametericResourceDemand specification="items.VALUE"/>
+          <specification_ParametericResourceDemand specification="5007.9"/>
           <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
         </resourceDemand_Action>
       </steps_Behaviour>

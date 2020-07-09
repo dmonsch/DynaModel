@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ASCII"?>
 <resourceenvironment:ResourceEnvironment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:resourceenvironment="http://palladiosimulator.org/PalladioComponentModel/ResourceEnvironment/5.2">
   <resourceContainer_ResourceEnvironment id="_4PZAcDWXEeqEyfgnV4BB-w" entityName="VirtualizedTeastoreContainer">
     <activeResourceSpecifications_ResourceContainer id="_6KsPgDWXEeqEyfgnV4BB-w">
