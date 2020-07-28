@@ -6,6 +6,7 @@ services:
       - '8090:8080'
     expose:
       - '8080'
+      - '10133'
     healthcheck:
       test:
         - CMD

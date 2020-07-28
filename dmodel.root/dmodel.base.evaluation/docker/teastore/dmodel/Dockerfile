@@ -24,6 +24,7 @@ RUN mkdir /dmodel
 ADD DModel-Bundled.jar /dmodel/dmodel.jar
 ADD config.yml /dmodel/config.yml
 ADD models /dmodel/models
+ADD teastore /dmodel/teastore
 	
 EXPOSE 8080 8080
 

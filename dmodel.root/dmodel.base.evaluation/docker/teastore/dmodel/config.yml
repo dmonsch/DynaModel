@@ -1,8 +1,8 @@
 ---
 project:
-  rootPath: ""
+  rootPath: "teastore"
   sourceFolders:
-  - ""
+  - "empty"
 models:
   repositoryPath: "models/teastore.repository"
   systemPath: "models/teastore.system"
