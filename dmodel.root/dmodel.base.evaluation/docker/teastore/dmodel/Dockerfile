@@ -1,4 +1,4 @@
-FROM openjdk:12
+FROM openjdk:13
 
 MAINTAINER David Monschein
 
@@ -22,6 +22,8 @@ RUN chmod +x /*.sh
 # add JAR
 RUN mkdir /dmodel
 ADD DModel-Bundled.jar /dmodel/dmodel.jar
+ADD config.yml /dmodel/config.yml
+ADD models /dmodel/models
 	
 EXPOSE 8080 8080
 
