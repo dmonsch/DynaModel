@@ -1,5 +1,10 @@
 version: '2.2'
 services:
+  jmeter:
+    image: teastore-load
+    depends_on:
+      webui:
+        condition: service_healthy
   dmodel:
     image: davmonsch/dmodel
     ports:
@@ -99,3 +104,12 @@ services:
         condition: service_healthy
     ports:
       - '8080:8080'
+    healthcheck:
+      test:
+        - CMD
+        - curl
+        - '-f'
+        - 'http://localhost:8080/tools.descartes.teastore.webui/status'
+      interval: 45s
+      timeout: 10s
+      retries: 10
