@@ -8,7 +8,8 @@ RUN \
 	yum -y install unzip && \
 	yum -y install nano && \
 	yum -y install git && \
-	yum -y install curl wget
+	yum -y install curl wget && \
+	yum -y install dos2unix
 
 RUN mkdir /jmeter \
     && cd /jmeter/ \
@@ -23,6 +24,8 @@ ENV PATH $JMETER_HOME/bin:$PATH
 
 ADD start.sh /start.sh 
 ADD test.jmx /test.jmx
+
+RUN dos2unix /start.sh
 
 #Make the scripts executable 
 RUN chmod +x /*.sh
