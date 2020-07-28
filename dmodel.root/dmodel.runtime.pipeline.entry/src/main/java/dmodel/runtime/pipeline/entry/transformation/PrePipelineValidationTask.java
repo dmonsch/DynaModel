@@ -12,6 +12,7 @@ import dmodel.runtime.pipeline.annotation.OutputPort;
 import dmodel.runtime.pipeline.annotation.OutputPorts;
 import dmodel.runtime.pipeline.blackboard.RuntimePipelineBlackboard;
 import dmodel.runtime.pipeline.data.PartitionedMonitoringData;
+import dmodel.runtime.pipeline.inm.transformation.InstrumentationModelTransformation;
 import dmodel.runtime.pipeline.pcm.router.FinalValidationTask;
 import lombok.extern.java.Log;
 
@@ -23,7 +24,8 @@ public class PrePipelineValidationTask extends AbstractIterativePipelinePart<Run
 	}
 
 	@InputPorts({ @InputPort(PortIDs.T_VAL_PRE) })
-	@OutputPorts({ @OutputPort(to = ServiceCallTreeBuilder.class, id = PortIDs.T_BUILD_SERVICECALL_TREE, async = false),
+	@OutputPorts({
+			@OutputPort(to = InstrumentationModelTransformation.class, id = PortIDs.T_PRE_VAL_IMM, async = false),
 			@OutputPort(to = FinalValidationTask.class, id = PortIDs.T_RAW_FINAL_VALIDATION, async = false) })
 	public PartitionedMonitoringData<PCMContextRecord> prePipelineValidation(
 			PartitionedMonitoringData<PCMContextRecord> recs) {

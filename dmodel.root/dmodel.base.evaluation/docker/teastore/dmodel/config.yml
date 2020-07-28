@@ -1,0 +1,38 @@
+---
+project:
+  rootPath: ""
+  sourceFolders:
+  - ""
+models:
+  repositoryPath: "models/teastore.repository"
+  systemPath: "models/teastore.system"
+  usagePath: "models/teastore.usagemodel"
+  allocationPath: "models/teastore.allocation"
+  envPath: "models/teastore.resourceenvironment"
+  instrumentationModelPath: "models/teastore.imm"
+  correspondencePath: "models/teastore.correspondences"
+  runtimeEnvironmentPath: "models/teastore.rem"
+entry:
+  slidingWindowSize: 360
+  slidingWindowTrigger: 180
+vfl:
+  url: "pcm-docker"
+  port: 8080
+  simulationTime: 300000
+  measurements: 10000
+  targetServiceId: ""
+  minInterarrivalTime: 2500
+  validationShare: 0.2
+validationPredicates:
+  condition: "OR"
+  value: 0.0
+  rules:
+  - id: "kstest"
+    operator: "less"
+    value: 0.2
+  - id: "avg_rel"
+    operator: "less"
+    value: 0.15
+  - id: "avg_absolute"
+    operator: "less_or_equal"
+    value: 3

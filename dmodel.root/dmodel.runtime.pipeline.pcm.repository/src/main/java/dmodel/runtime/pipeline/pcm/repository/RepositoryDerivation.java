@@ -52,7 +52,8 @@ public class RepositoryDerivation {
 			Set<String> presentServices = data.getAllData().stream().filter(f -> f instanceof ServiceCallRecord)
 					.map(ServiceCallRecord.class::cast).map(s -> s.getServiceId()).collect(Collectors.toSet());
 
-			adjuster.prepareAdjustments(pcm, validation, toPrepare, presentServices);
+			RepositoryStoexChanges preChanges = adjuster.prepareAdjustments(pcm, validation, toPrepare,
+					presentServices);
 
 			MonitoringDataSet monitoringDataSet = new MonitoringDataSet(data.getTrainingData(), mappingFacade, remQuery,
 					pcm.getAllocation(), pcm.getRepository());
@@ -62,6 +63,7 @@ public class RepositoryDerivation {
 			IResourceDemandEstimator estimation = new ResourceDemandEstimatorAlternative(pcm);
 			estimation.prepare(monitoringDataSet);
 			RepositoryStoexChanges result = estimation.derive(adjuster.getAdjustments());
+			result.inherit(preChanges);
 
 			log.info("Finished calibration of internal actions.");
 			log.info("Finished repository calibration.");

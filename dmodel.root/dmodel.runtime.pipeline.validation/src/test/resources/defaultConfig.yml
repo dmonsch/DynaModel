@@ -17,7 +17,7 @@ entry:
   slidingWindowTrigger: 30
 vfl:
   url: "127.0.0.1"
-  port: 8080
+  port: 8100
   simulationTime: 150000
   measurements: 10000
   validationShare: 0.1

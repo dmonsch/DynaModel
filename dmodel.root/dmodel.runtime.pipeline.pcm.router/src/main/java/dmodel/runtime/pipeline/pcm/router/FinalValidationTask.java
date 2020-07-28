@@ -8,11 +8,8 @@ import dmodel.designtime.monitoring.records.PCMContextRecord;
 import dmodel.runtime.pipeline.AbstractIterativePipelinePart;
 import dmodel.runtime.pipeline.annotation.InputPort;
 import dmodel.runtime.pipeline.annotation.InputPorts;
-import dmodel.runtime.pipeline.annotation.OutputPort;
-import dmodel.runtime.pipeline.annotation.OutputPorts;
 import dmodel.runtime.pipeline.blackboard.RuntimePipelineBlackboard;
 import dmodel.runtime.pipeline.data.PartitionedMonitoringData;
-import dmodel.runtime.pipeline.inm.transformation.InstrumentationModelTransformation;
 import dmodel.runtime.pipeline.validation.data.ValidationData;
 import lombok.extern.java.Log;
 
@@ -24,7 +21,6 @@ public class FinalValidationTask extends AbstractIterativePipelinePart<RuntimePi
 	}
 
 	@InputPorts({ @InputPort(PortIDs.T_RAW_FINAL_VALIDATION), @InputPort(PortIDs.T_FINAL_VALIDATION) })
-	@OutputPorts({ @OutputPort(id = PortIDs.T_VAL_IMM, async = false, to = InstrumentationModelTransformation.class) })
 	public ValidationData validateFinal(PartitionedMonitoringData<PCMContextRecord> recs) {
 		super.trackStart();
 

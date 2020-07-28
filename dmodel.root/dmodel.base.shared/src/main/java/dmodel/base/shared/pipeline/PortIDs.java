@@ -70,5 +70,5 @@ public interface PortIDs {
 	 * The connection port from the final validation to instrumentation model
 	 * transformation.
 	 */
-	String T_VAL_IMM = "final->imm";
+	String T_PRE_VAL_IMM = "val_pre->imm";
 }

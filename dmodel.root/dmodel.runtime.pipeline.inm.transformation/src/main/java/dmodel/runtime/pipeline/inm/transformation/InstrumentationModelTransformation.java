@@ -16,12 +16,17 @@ import com.google.common.collect.Sets;
 import dmodel.base.core.config.ConfigurationContainer;
 import dmodel.base.core.config.PredicateRuleConfiguration;
 import dmodel.base.core.evaluation.ExecutionMeasuringPoint;
+import dmodel.base.core.validation.ValidationSchedulePoint;
 import dmodel.base.models.inmodel.InstrumentationMetamodel.ServiceInstrumentationPoint;
 import dmodel.base.shared.pipeline.PortIDs;
+import dmodel.designtime.monitoring.records.PCMContextRecord;
 import dmodel.runtime.pipeline.AbstractIterativePipelinePart;
 import dmodel.runtime.pipeline.annotation.InputPort;
 import dmodel.runtime.pipeline.annotation.InputPorts;
+import dmodel.runtime.pipeline.annotation.OutputPort;
+import dmodel.runtime.pipeline.annotation.OutputPorts;
 import dmodel.runtime.pipeline.blackboard.RuntimePipelineBlackboard;
+import dmodel.runtime.pipeline.data.PartitionedMonitoringData;
 import dmodel.runtime.pipeline.inm.transformation.predicate.ValidationPredicate;
 import dmodel.runtime.pipeline.inm.transformation.predicate.config.ELogicalOperator;
 import dmodel.runtime.pipeline.inm.transformation.predicate.config.ENumericalComparator;
@@ -58,12 +63,16 @@ public class InstrumentationModelTransformation extends AbstractIterativePipelin
 	@Autowired
 	private ConfigurationContainer configuration;
 
-	@InputPorts({ @InputPort(PortIDs.T_VAL_IMM) })
-	public void adjustInstrumentationModel(ValidationData validation) {
+	@InputPorts({ @InputPort(PortIDs.T_PRE_VAL_IMM) })
+	@OutputPorts(@OutputPort(to = ServiceCallTreeBuilder.class, id = PortIDs.T_BUILD_SERVICECALL_TREE, async = false))
+	public PartitionedMonitoringData<PCMContextRecord> adjustInstrumentationModel(
+			PartitionedMonitoringData<PCMContextRecord> records) {
+		ValidationData validation = getBlackboard().getValidationResultsQuery()
+				.get(ValidationSchedulePoint.PRE_PIPELINE);
 		if (validation.isEmpty()) {
 			super.trackStart();
 			super.trackEnd();
-			return;
+			return records;
 		}
 
 		super.trackStart();
@@ -119,6 +128,8 @@ public class InstrumentationModelTransformation extends AbstractIterativePipelin
 		});
 
 		super.trackEnd();
+
+		return records;
 	}
 
 	private void changeInstrumentationModel(String deInstr, boolean b) {

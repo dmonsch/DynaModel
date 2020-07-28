@@ -12,6 +12,8 @@ import org.palladiosimulator.pcm.usagemodel.UsageScenario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.google.common.collect.Sets;
+
 import dmodel.base.core.evaluation.ExecutionMeasuringPoint;
 import dmodel.base.core.state.EPipelineTransformation;
 import dmodel.base.core.state.ETransformationState;
@@ -84,7 +86,7 @@ public class AccuracySwitch extends AbstractIterativePipelinePart<RuntimePipelin
 
 		// 1.2. submit repository derivation
 		submitRepositoryTransformation(rawMonitoringData, ExecutionMeasuringPoint.T_DEMAND_CALIBRATION_1,
-				EPipelineTransformation.T_REPOSITORY1, ValidationSchedulePoint.PRE_PIPELINE);
+				EPipelineTransformation.T_REPOSITORY1, ValidationSchedulePoint.PRE_PIPELINE, true);
 
 		// 2. wait for the transformations to finish
 		try {
@@ -127,7 +129,7 @@ public class AccuracySwitch extends AbstractIterativePipelinePart<RuntimePipelin
 			getBlackboard().getQuery().trackPath(false);
 
 			submitRepositoryTransformation(rawMonitoringData, ExecutionMeasuringPoint.T_DEMAND_CALIBRATION_2,
-					EPipelineTransformation.T_REPOSITORY2, ValidationSchedulePoint.AFTER_T_USAGE);
+					EPipelineTransformation.T_REPOSITORY2, ValidationSchedulePoint.AFTER_T_USAGE, false);
 		}
 
 		// 4.1. wait for transformation to finish
@@ -142,7 +144,7 @@ public class AccuracySwitch extends AbstractIterativePipelinePart<RuntimePipelin
 		extractedStoexChanges.apply(getBlackboard().getPcmQuery().getRaw().getRepository());
 		applyUsageScenarios(extractedUsageScenarios, getBlackboard().getPcmQuery().getRaw().getUsageModel());
 
-		// 6. reset caches (soft) because the may invalid now
+		// 6. reset caches (soft) because they may be invalid now
 		getBlackboard().reset(false);
 
 		// evaluation
@@ -182,14 +184,14 @@ public class AccuracySwitch extends AbstractIterativePipelinePart<RuntimePipelin
 
 	private void submitRepositoryTransformation(PartitionedMonitoringData<PCMContextRecord> rawMonitoringData,
 			ExecutionMeasuringPoint measuringPoint, EPipelineTransformation transformation,
-			ValidationSchedulePoint reference) {
+			ValidationSchedulePoint reference, boolean prepare) {
 		executorService.submit(() -> {
 			getBlackboard().getQuery().track(measuringPoint);
 			getBlackboard().getQuery().updateState(transformation, ETransformationState.RUNNING);
 
 			extractedStoexChanges = repositoryTransformation.calibrateRepository(rawMonitoringData,
 					getBlackboard().getPcmQuery(), getBlackboard().getValidationResultsQuery().get(reference),
-					fineGrainedInstrumentedServices);
+					prepare ? fineGrainedInstrumentedServices : Sets.newHashSet());
 
 			getBlackboard().getQuery().updateState(transformation, ETransformationState.FINISHED);
 			getBlackboard().getQuery().track(measuringPoint);

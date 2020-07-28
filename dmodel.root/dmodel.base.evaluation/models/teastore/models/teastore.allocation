@@ -22,8 +22,8 @@
     <resourceContainer_AllocationContext href="teastore.resourceenvironment#_4PZAcDWXEeqEyfgnV4BB-w"/>
     <assemblyContext_AllocationContext href="teastore.system#_H5R74DWXEeqEyfgnV4BB-w"/>
   </allocationContexts_Allocation>
-  <allocationContexts_Allocation id="_JrFLAL-fEeqbMKXB29wVlA" entityName="Assembly-SlopeOneRecommender-1594050085 -> VirtualizedTeastoreContainer">
+  <allocationContexts_Allocation id="_AOsXENAcEeqESJ3TATRgwQ" entityName="Assembly-SlopeOneRecommender-1595862928 -> VirtualizedTeastoreContainer">
     <resourceContainer_AllocationContext href="teastore.resourceenvironment#_4PZAcDWXEeqEyfgnV4BB-w"/>
-    <assemblyContext_AllocationContext href="teastore.system#_JrD84L-fEeqbMKXB29wVlA"/>
+    <assemblyContext_AllocationContext href="teastore.system#_AOrI8NAcEeqESJ3TATRgwQ"/>
   </allocationContexts_Allocation>
 </allocation:Allocation>

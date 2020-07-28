@@ -40,6 +40,10 @@ public class UsageBranchDescriptor implements IAbstractUsageDescriptor {
 
 	@Override
 	public AbstractUserAction toPCM() {
+		if (childs.size() == 0) {
+			return null;
+		}
+
 		Branch ret = UsagemodelFactory.eINSTANCE.createBranch();
 
 		childs.forEach(ch -> {

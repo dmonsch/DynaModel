@@ -1,9 +1,7 @@
 
 dependencies {
 	api project(":dmodel.runtime.pipeline")
-	api project(":dmodel.runtime.pipeline.pcm.router")
-	api project(":dmodel.runtime.pipeline.pcm.system")
-	api project(":dmodel.runtime.pipeline.pcm.resourceenv")
+	api project(":dmodel.runtime.pipeline.inm.transformation")
 
 	api project(":dmodel.designtime.monitoring")
 

@@ -9,6 +9,7 @@ dependencies {
 	api project(":dmodel.runtime.pipeline")
 	
 	implementation project(":dmodel.base.models.runtimeenvironment")
+	implementation project(":dmodel.base.models.callgraph")
 	
 	implementation group: 'org.cache2k', name: 'cache2k-core', version: '1.2.4.Final'
 	
