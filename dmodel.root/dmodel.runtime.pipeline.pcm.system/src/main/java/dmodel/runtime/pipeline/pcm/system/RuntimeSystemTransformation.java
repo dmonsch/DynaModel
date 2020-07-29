@@ -90,6 +90,10 @@ public class RuntimeSystemTransformation extends AbstractIterativePipelinePart<R
 		}
 		currentCallGraph.rebuild();
 
+		currentCallGraph.getNodes()
+				.forEach(n -> System.out.println(n.getSeff().getDescribedService__SEFF().getEntityName() + ","
+						+ currentCallGraph.getOutgoingEdges().get(n).size()));
+
 		// clean unreachable nodes
 		final ServiceCallGraph finalCallGraph = currentCallGraph;
 		List<ServiceCallGraphNode> unreachableNodes = currentCallGraph.getNodes().stream()
@@ -142,8 +146,9 @@ public class RuntimeSystemTransformation extends AbstractIterativePipelinePart<R
 			BasicComponent componentTo, ServiceCallGraphNode existingNodeFrom) {
 		// this edges are inconsistent with the new one
 		List<ServiceCallGraphEdge> oldEdges = parent.getOutgoingEdges().get(existingNodeFrom).stream().filter(e -> {
-			return e.getExternalCall().getRole_ExternalService().equals(correspondingReqRole)
-					&& !e.getTo().getSeff().getBasicComponent_ServiceEffectSpecification().equals(componentTo);
+			return e.getExternalCall().getRole_ExternalService().getId().equals(correspondingReqRole.getId())
+					&& !e.getTo().getSeff().getBasicComponent_ServiceEffectSpecification().getId()
+							.equals(componentTo.getId());
 		}).collect(Collectors.toList());
 		oldEdges.forEach(oe -> parent.removeEdge(oe));
 	}

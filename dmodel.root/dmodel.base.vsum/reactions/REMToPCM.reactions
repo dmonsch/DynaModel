@@ -141,6 +141,7 @@ routine buildLinkAndMap(REM::RuntimeResourceContainerConnection conn, ResourceEn
 			nCommunicationSpec.failureProbability = 0
 			nCommunicationSpec.latency_CommunicationLinkResourceSpecification = latencyStoex
 			nCommunicationSpec.throughput_CommunicationLinkResourceSpecification = throughputStoex
+			nCommunicationSpec.communicationLinkResourceType_CommunicationLinkResourceSpecification = ReactionHelper.LANCommunicationResourceType
 		}
 		
 		val nLink = create ResourceEnvironment::LinkingResource and initialize {

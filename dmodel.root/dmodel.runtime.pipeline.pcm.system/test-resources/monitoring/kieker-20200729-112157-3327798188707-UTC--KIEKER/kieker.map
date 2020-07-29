@@ -1,0 +1,4 @@
+$0=dmodel.designtime.monitoring.records.ResourceUtilizationRecord
+$1=dmodel.designtime.monitoring.records.ResponseTimeRecord
+$2=dmodel.designtime.monitoring.records.ServiceCallRecord
+$3=dmodel.designtime.monitoring.records.LoopRecord

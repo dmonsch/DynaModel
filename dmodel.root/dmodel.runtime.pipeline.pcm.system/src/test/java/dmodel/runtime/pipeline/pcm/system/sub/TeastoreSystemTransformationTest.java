@@ -53,13 +53,16 @@ public class TeastoreSystemTransformationTest extends AbstractBaseSystemTransfor
 		loadModels();
 		super.reloadVsum();
 
-		remQuery.createResourceContainer("f1039ae1e5c650f0228043ad4158babf", "VirtualizedTeastoreContainer");
+		remQuery.createResourceContainer("67f0132e7401d4390bc3a201463dd269", "0c5543ea567c");
+		remQuery.createResourceContainer("29f3738d316c2db8b810651a11254811", "a05c8367ac1a");
+		remQuery.createResourceContainer("46182745a0ff24d2d5c7f8f3c39357a4", "71a769a2a851");
+		remQuery.createResourceContainer("5f64786520b6839ead17f4dec53116ae", "350b6af59ebe");
 	}
 
 	@Test
 	public void teastoreDerivationTest() throws IllegalStateException, AnalysisConfigurationException {
 		List<PCMContextRecord> records = MonitoringDataUtil.getMonitoringDataFromFiles(
-				"test-resources/monitoring/kieker-20200706-121111-12748299597224-UTC--KIEKER");
+				"test-resources/monitoring/kieker-20200729-112157-3327798188707-UTC--KIEKER");
 
 		List<Tree<ServiceCallRecord>> trees = MonitoringDataUtil
 				.buildServiceCallTree(records.stream().filter(r -> r instanceof ServiceCallRecord)

@@ -11,6 +11,7 @@ import org.palladiosimulator.pcm.resourceenvironment.ResourceContainer;
 import org.palladiosimulator.pcm.resourceenvironment.ResourceEnvironment;
 
 import dmodel.base.models.runtimeenvironment.REModel.RuntimeResourceContainerConnection;
+import dmodel.base.vsum.util.ReactionHelper;
 import tools.vitruv.extensions.dslsruntime.reactions.AbstractRepairRoutineRealization;
 import tools.vitruv.extensions.dslsruntime.reactions.ReactionExecutionState;
 import tools.vitruv.extensions.dslsruntime.reactions.structure.CallHierarchyHaving;
@@ -46,6 +47,8 @@ public class BuildLinkAndMapRoutine extends AbstractRepairRoutineRealization {
 			nCommunicationSpec.setFailureProbability(0);
 			nCommunicationSpec.setLatency_CommunicationLinkResourceSpecification(latencyStoex);
 			nCommunicationSpec.setThroughput_CommunicationLinkResourceSpecification(throughputStoex);
+			nCommunicationSpec.setCommunicationLinkResourceType_CommunicationLinkResourceSpecification(
+					ReactionHelper.getLANCommunicationResourceType());
 		}
 
 		public void updateNLinkElement(final RuntimeResourceContainerConnection conn, final ResourceEnvironment parent,
